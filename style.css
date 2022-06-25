@@ -338,7 +338,7 @@ a:hover{
     gap: 1rem 0;
     margin-top: 1rem;
     box-shadow: var(--shadowTint);
-    overflow: auto;
+    overflow-x:auto;
     scroll-snap-type: x mandatory;
 }
 
@@ -535,8 +535,8 @@ a:hover{
 /* explore-discount-section-start  */
 
 #explore{
-    width: 100%;
-    margin: 6rem 0 1.5rem 0;  
+    max-width: 1500px;
+    margin: 6rem auto 1.5rem auto;  
     position: relative;
 }
 
@@ -555,6 +555,7 @@ a:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .overlay>p{
@@ -580,7 +581,8 @@ a:hover{
 /* feature-item-section-start */
 
 #feature-section{
-    margin: 6rem 0 1.5rem 0;  
+    margin: 6rem auto 1.5rem auto;  
+    
 }
 
 .feature-head{
@@ -622,6 +624,7 @@ justify-content: center;
 flex-direction: column;
 cursor: pointer;
 opacity: 0;
+text-align: center;
 transition: all 0.8s;
 }
 
@@ -658,14 +661,14 @@ color: var(--green);
 /* newsletter-section-start  */
 
 #newsletter{
-    margin: 6rem 0 1.5rem 0;  
-    width: 100%;
+    margin: 6rem auto 1.5rem auto;  
+    max-width: 1500px;
     background-color: var(--dark-color);
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     gap: 2rem;
-    padding: 5rem 5rem;
+    padding: 5rem;
 }
 
 .left-newsletter>h2{
@@ -684,10 +687,11 @@ color: var(--green);
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .newsletter-input{
-    width: 100%;
+    width: 85%;
     display: grid;
     grid-template-columns: 0.8fr 0.2fr;
     border-radius: 8px;
@@ -724,11 +728,11 @@ color: var(--green);
 /* delivery-section-start  */
 
 #delivery{
-    margin: 6rem 0 1.5rem 0;  
-    width: 100%;
+    margin: 6rem auto 1.5rem auto;  
+    max-width: 1500px;
     background-color: var(--light-color);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,auto);
     gap: 0 4rem;
 }
 
@@ -766,14 +770,16 @@ color: var(--green);
 
 
 
+
 /* footer-section-start   */
 
 #footer-section{
-    width: 100%;
-    margin: 6rem 0 0 0; 
+    max-width: 1500px;
+    margin: 6rem auto 0 auto; 
     background-color: var(--dark-color);
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
     gap: 2rem;
 }
 
@@ -829,12 +835,12 @@ color: var(--green);
     font-size: 1.4rem;
 }
 
-.owner-name>a{
+.owner-name>p>a{
     color: var(--green);
     letter-spacing: 1px;
 }
 
-.owner-name>a:hover{
+.owner-name>p>a:hover{
     color: var(--green)!important;
 }
 
@@ -934,10 +940,25 @@ color: var(--green);
         padding: 2.5rem 0;
     }
 
-    #deal-section, #trending-section, #newArrival{
+    #deal-section, #trending-section, #newArrival, #explore, #feature-section, #newsletter,#delivery{
         margin: 4rem auto 1rem auto;
     }
 
+    #footer-section{
+        margin: 4rem auto 0 auto;
+    }
+
+    .overlay-1>p{
+        font-size: 1.6rem;
+    }
+        
+    .overlay-1>h1{
+        font-size: 1.8rem;
+    }
+
+    .footer-box{
+        padding: 1rem 0;
+    }
 }
 
 
@@ -962,8 +983,12 @@ color: var(--green);
         height: 26vh;
     }
 
-    #deal-section, #trending-section, #newArrival{
+    #deal-section, #trending-section, #newArrival, #explore,#feature-section, #newsletter,#delivery{
         margin: 3rem auto 1rem auto;
+    }
+
+    #footer-section{
+        margin: 3rem auto 0 auto;
     }
 
     .newArr-product-name{
@@ -984,6 +1009,54 @@ color: var(--green);
     
     .delivery{
         font-size: 1.4rem;
+    }
+
+    .overlay>p{
+        font-size: 1.5rem;
+    }
+
+    .overlay>h1{
+        font-size: 2rem;
+    }
+
+    .overlay-1>p{
+        font-size: 1.4rem;
+    }
+        
+    .overlay-1>h1{
+        font-size: 1.5rem;
+    }
+
+    #newsletter{
+        padding: 3rem;
+    }
+
+    .left-newsletter>p{
+        font-size: 1.2rem;
+    }
+
+    .left-newsletter>h2{
+        font-size: 2rem;
+    }
+
+    .newsletter-input{
+        width: 100%;
+    }
+
+    #delivery{
+        gap: 0 2rem;
+    }
+
+    .delivery-box{
+        padding: 1rem;
+    }
+
+    #footer-section{
+        gap: 0;
+    }
+
+    .footer-box{
+        padding: 1rem 0;
     }
 }
 
@@ -1045,8 +1118,12 @@ color: var(--green);
         height: 25vh;
     }
 
-    #deal-section, #trending-section, #newArrival{
+    #deal-section, #trending-section, #newArrival,#explore,#feature-section, #newsletter,#delivery{
         margin: 2rem auto 0.5rem auto;
+    }
+
+    #footer-section{
+        margin: 2rem auto 0 auto;
     }
 
     .product-img>img{
@@ -1079,6 +1156,93 @@ color: var(--green);
     
     .delivery{
         font-size: 1.2rem;
+    }
+
+    .overlay>p{
+        font-size: 1.2rem;
+    }
+
+    .overlay>h1{
+        font-size: 1.7rem;
+    }
+
+    .view-btn>a{
+        font-size: 1.2rem;
+    }
+
+    .feature-body{
+        grid-template-columns: 1fr;
+    }
+
+    .feature-product-box{
+        grid-column: 1/2;
+    }
+
+    .overlay-1>p{
+        font-size: 1.4rem;
+    }
+        
+    .overlay-1>h1{
+        font-size: 1.5rem;
+    }
+
+    #newsletter{
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .left-newsletter{
+        text-align: center;
+    }
+
+    .left-newsletter>p{
+        font-size: 1.2rem;
+    }
+
+    .left-newsletter>h2{
+        font-size: 2rem;
+    }
+
+    .right-newsletter{
+        justify-content: center;
+    }
+
+    .newsletter-input{
+        width: 80%;
+    }
+
+    #delivery{
+        gap: 0 0.5rem;
+    }
+
+    .delivery-box{
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .delivery-icon{
+        font-size: 2rem;
+    }
+
+    .delivery-box>h4{
+        font-size: 1.2rem;
+    }
+
+    .delivery-box>p{
+        font-size: 1.2rem;
+    }
+
+    #footer-section{
+        gap: 1rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .footer-box{
+        padding: 1rem 0;
+    }
+
+    .owner-name{
+        grid-column: 1/3;
     }
 }
 
@@ -1178,8 +1342,12 @@ color: var(--green);
         height: 20vh;
     }
 
-    #deal-section, #trending-section, #newArrival{
+    #deal-section, #trending-section, #newArrival,#explore, #feature-section, #newsletter,#delivery{
         margin: 2rem auto 0.5rem auto;
+    }
+
+    #footer-section{
+        margin: 2rem auto 0 auto;
     }
 
     .product-img>img{
@@ -1219,6 +1387,89 @@ color: var(--green);
         font-size: 1.2rem;
     }
 
+    .overlay>p{
+        font-size: 1.1rem;
+    }
+
+    .overlay>h1{
+        font-size: 1.3rem;
+    }
+
+    #explore>img{
+        height: 22vh;
+    }
+
+    .feature-body{
+        grid-template-columns: 1fr;
+    }
+
+    .feature-product-box{
+        grid-column: 1/2;
+    }
+
+    .overlay-1>p{
+        font-size: 1.2rem;
+    }
+        
+    .overlay-1>h1{
+        font-size: 1.2rem;
+    }
+
+    #newsletter{
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .left-newsletter{
+        text-align: center;
+    }
+
+    .left-newsletter>p{
+        font-size: 1.1rem;
+    }
+
+    .left-newsletter>h2{
+        font-size: 1.6rem;
+    }
+
+    .newsletter-input{
+        width: 100%;
+    }
+
+    #delivery{
+        gap: 0.5rem 0;
+        grid-template-columns:1fr;
+    }
+
+    .delivery-box{
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .delivery-icon{
+        font-size: 2.5rem;
+    }
+
+    .delivery-box>h4{
+        font-size: 1.2rem;
+    }
+
+    .delivery-box>p{
+        font-size: 1.2rem;
+    }
+
+    #footer-section{
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-box{
+        padding: 1rem 0;
+    }
+
+    .owner-name{
+        grid-column: 1/2;
+    }
 }
 
 
@@ -1323,8 +1574,12 @@ color: var(--green);
         height: 18vh;
     }
     
-    #deal-section, #trending-section, #newArrival{
+    #deal-section, #trending-section, #newArrival,#explore, #feature-section, #newsletter,#delivery{
         margin: 2rem auto 0.5rem auto;
+    }
+
+    #footer-section{
+        margin: 2rem auto 0 auto;
     }
 
     .product-img>img{
@@ -1363,7 +1618,113 @@ color: var(--green);
     .delivery{
         font-size: 1.1rem;
     }
+
+    .overlay>p{
+        font-size: 1.1rem;
+    }
+
+    .overlay>h1{
+        font-size: 1.3rem;
+    }
+
+    #explore>img{
+        height: 22vh;
+    }
+
+    .feature-body{
+        grid-template-columns: 1fr;
+    }
+
+    .feature-product-box{
+        grid-column: 1/2;
+    }
+
+    .overlay-1>p{
+        font-size: 1.1rem;
+    }
+        
+    .overlay-1>h1{
+        font-size: 1.1rem;
+    }
+
+    #newsletter{
+        padding: 1rem 0.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .left-newsletter{
+        text-align: center;
+    }
+
+    .left-newsletter>p{
+        font-size: 1.1rem;
+    }
+
+    .left-newsletter>h2{
+        font-size: 1.3rem;
+    }
+
+    .newsletter-input{
+        width: 100%;
+        grid-template-columns: 0.7fr 0.3fr;
+    }
+
+    .newsletter-input>input{
+        font-size: 1rem;
+    }
+
+    .newsletter-input>label{
+        font-size: 1rem;
+    }
+
+    #delivery{
+        gap: 0.5rem 0;
+        grid-template-columns:1fr;
+    }
+
+    .delivery-box{
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .delivery-icon{
+        font-size: 2rem;
+    }
+
+    .delivery-box>h4{
+        font-size: 1rem;
+    }
+
+    .delivery-box>p{
+        font-size: 1rem;
+    }
+
+    #footer-section{
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-box{
+        padding: 1rem 0;
+    }
+
+    .footer-box>p{
+        font-size: 1.1rem;
+    }
+
+    .owner-name{
+        grid-column: 1/2;
+    }
+
+    .owner-name>p{
+        font-size: 1.1rem;
+    }
+
+    #logo-foot{
+        font-size: 2rem;
+    }
 }
+
 /* -------------------media-queries-end -------------------- */
 
 

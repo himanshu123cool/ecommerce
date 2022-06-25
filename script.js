@@ -1,15 +1,7 @@
 // more-option-script 
-$('#more').mouseenter(function(){
-    $('.right-wrapper-container').show()
+$('#more').click(function(){
+    $('.right-wrapper-container').toggle()
 })
-$('.right-wrapper-container').mouseenter(function(){
-    $('.right-wrapper-container').show()
-})
-
-$('.right-wrapper-container').mouseleave(function(){
-    $('.right-wrapper-container').hide()
-})
-
 
 // newArr-wishlist-script 
 $('.newArr-wishlist').click(function(){

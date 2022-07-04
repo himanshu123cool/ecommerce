@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
 
 
-/* CSS Reset  */
+/*----------------------------- CSS Reset  ----------------------------------*/
 *{
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@
 }
 
 
-/* variable  */
+/*----------------------------- variable  ----------------------------------*/
 :root{
     --dark-color : #000;
     --light-color : #fff;
@@ -91,13 +91,23 @@ a:hover{
 }
 
 
-/* header-section-start  */
+
+#sticky-container{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+
+/*----------------------------- header-section-start  ----------------------------------*/
 
 #header{
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
+    background-color: var(--light-color);
 }
 
 .left-head{
@@ -208,6 +218,7 @@ a:hover{
     border-radius: 2px;
     padding: 0.6rem 1rem 0.6rem 0.6rem;
     display: none;
+    z-index: 9;
 }
 
 .right-wrapper-menu{
@@ -226,7 +237,227 @@ a:hover{
     color: var(--dark-color);
 }
 
-/* header-section-end  */
+.sidebar{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--light-color);
+    z-index: 99;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 2.5fr 5fr;
+    gap: 1rem 0;
+    box-shadow: var(--shadowTint);
+    display: none;
+}
+
+.close{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.close-icon{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.user-img-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem 0;
+}
+
+.user-img-box{
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+.user-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.Upload-photo{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#file{
+    display: none;
+}
+
+.user-id>p{
+    font-size: 2.2rem;
+    color: var(--green);
+}
+
+.sidebar-navlist{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.sidebar-navlist>ul>li{
+    font-size: 1.7rem;
+    padding: 0.7rem 0;
+    font-weight: 500;
+}
+
+.sidebar-navlist>ul>li>a{
+    color: var(--dark-color);
+}
+
+/*----------------------------- header-section-end  ----------------------------------*/
+
+
+
+
+
+
+/*----------------------------- login-section-start  ----------------------------------*/
+
+#login-section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display: none;
+}
+ 
+.login-container{
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+}
+
+.signup-container{
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    display: none;
+}
+
+.left-login-box, .left-signup-box{
+    background-color: var(--dark-color);
+    padding: 2rem 1rem;
+}
+
+.login-heading, .signup-heading{
+    font-size: 3rem;
+    color: var(--light-color);
+}
+
+.login-text, .signup-text{
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.right-login-box, .right-signup-box{
+    background-color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-login-box>div , .right-signup-box>div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.form-row-box{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.form-row-box>input{
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid var(--grey-color);
+}
+
+.form-row-box>input:focus{
+    border-bottom: 2px solid var(--green);
+}
+
+.form-row-box>p{
+    font-size: 1.3rem;
+}
+
+.form-row-box>p>a:hover{
+    color: var(--freeDelivery-color)!important;
+}
+
+#login-btn, #signup-btn{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.login-icon{
+    z-index: 99;
+    color: var(--light-color);
+    font-size: 3rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.welcome-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-color);
+    border-radius: 3px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    display: none;
+}
+
+.welcome-text{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.welcome-heading{
+    color: var(--dark-color);
+}
+
+.welcome-character{
+    color: var(--green);
+    font-size: 2rem;
+}
+
+#start-btn{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+/*----------------------------- login-section-end  ----------------------------------*/
 
 
 
@@ -235,7 +466,22 @@ a:hover{
 
 
 
-/* navbar-section-start  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------- navbar-section-start  ----------------------------------*/
 
 #navbar{
     width: 100%;
@@ -280,14 +526,14 @@ a:hover{
 
 
 
-/* navbar-section-end  */
+/*----------------------------- navbar-section-end  ----------------------------------*/
 
 
 
 
 
 
-/* home-section-start  */
+/*----------------------------- home-section-start  ----------------------------------*/
 
 #home{
     background-color: var(--grey-color);
@@ -307,7 +553,7 @@ a:hover{
     margin: auto 0!important;
 }
 
-/* home-section-end */
+/*----------------------------- home-section-end ----------------------------------*/
 
 
 
@@ -315,7 +561,7 @@ a:hover{
 
 
 
-/* deal-section & trending-section start  */
+/*----------------------------- deal-section & trending-section start  ----------------------------------*/
 
 #deal-section, #trending-section{
     margin: 6rem auto 1.5rem auto;
@@ -405,7 +651,7 @@ a:hover{
     font-size: 1.1rem;
 }
 
-/* deal-section & trending-section end */
+/*----------------------------- deal-section & trending-section end ----------------------------------*/
 
 
 
@@ -413,7 +659,7 @@ a:hover{
 
 
 
-/* new-Arrival-section-start  */
+/*----------------------------- new-Arrival-section-start  ----------------------------------*/
 
 #newArrival{
     margin: 6rem auto 1.5rem auto;  
@@ -523,7 +769,7 @@ a:hover{
     color : red;
     cursor: pointer;
 }
-/* new-Arrival-section-end  */
+/*----------------------------- new-Arrival-section-end  ----------------------------------*/
 
 
 
@@ -532,7 +778,7 @@ a:hover{
 
 
 
-/* explore-discount-section-start  */
+/*----------------------------- explore-discount-section-start  ----------------------------------*/
 
 #explore{
     max-width: 1500px;
@@ -572,13 +818,13 @@ a:hover{
     color: var(--green);
 }
 
-/* explore-discount-section-end  */
+/*----------------------------- explore-discount-section-end  ----------------------------------*/
 
 
 
 
 
-/* feature-item-section-start */
+/*----------------------------- feature-item-section-start ----------------------------------*/
 
 #feature-section{
     margin: 6rem auto 1.5rem auto;  
@@ -649,7 +895,7 @@ color: var(--green);
 
 
 
-/* feature-item-section-end */
+/*----------------------------- feature-item-section-end ----------------------------------*/
 
 
 
@@ -658,7 +904,7 @@ color: var(--green);
 
 
 
-/* newsletter-section-start  */
+/*----------------------------- newsletter-section-start  ----------------------------------*/
 
 #newsletter{
     margin: 6rem auto 1.5rem auto;  
@@ -715,7 +961,7 @@ color: var(--green);
     cursor: pointer;
 }
 
-/* newsletter-section-end */
+/*----------------------------- newsletter-section-end ----------------------------------*/
 
 
 
@@ -725,7 +971,7 @@ color: var(--green);
 
 
 
-/* delivery-section-start  */
+/*----------------------------- delivery-section-start  ----------------------------------*/
 
 #delivery{
     margin: 6rem auto 1.5rem auto;  
@@ -760,7 +1006,7 @@ color: var(--green);
     font-size: 1.2rem;
 }
 
-/* delivery-section-end  */
+/*----------------------------- delivery-section-end  ----------------------------------*/
 
 
 
@@ -771,7 +1017,7 @@ color: var(--green);
 
 
 
-/* footer-section-start   */
+/*----------------------------- footer-section-start   ----------------------------------*/
 
 #footer-section{
     max-width: 1500px;
@@ -845,7 +1091,7 @@ color: var(--green);
 }
 
 
-/* footer-section-end */
+/*----------------------------- footer-section-end ----------------------------------*/
 
 
 
@@ -926,9 +1172,9 @@ color: var(--green);
 
 
 
-/* -------------------media-queries-start -------------------- */
+/*--------------------------media-queries-start----------------------------------*/
 
-/* desktop  */
+/*----------------------------- desktop  ----------------------------------*/
 @media (min-width:1025px) and (max-width:1200px){
     
     .container-box{
@@ -959,12 +1205,20 @@ color: var(--green);
     .footer-box{
         padding: 1rem 0;
     }
+
+    .sidebar{
+        width: 25%;
+    }
+
+    .login-container, .signup-container, .welcome-container{
+        width: 50%;
+    }
 }
 
 
 
 
-/* laptop  */
+/*----------------------------- laptop  ----------------------------------*/
 @media (min-width : 769px) and (max-width : 1024px){
 
     .container-box{
@@ -1058,13 +1312,25 @@ color: var(--green);
     .footer-box{
         padding: 1rem 0;
     }
+
+    .sidebar{
+        width: 30%;
+    }
+
+    .sidebar-navlist{
+        padding: 1rem;
+    }
+
+    .login-container, .signup-container, .welcome-container{
+        width: 70%;
+    }
 }
 
 
 
 
 
-/* tablet  */
+/*----------------------------- tablet  ----------------------------------*/
 @media (min-width : 481px) and (max-width : 768px){
 
     .container-box{
@@ -1244,12 +1510,41 @@ color: var(--green);
     .owner-name{
         grid-column: 1/3;
     }
+
+    .user-img-box{
+        width: 120px;
+        height: 120px;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    .sidebar-navlist{
+        padding: 1rem;
+    }
+
+    .login-container, .signup-container, .welcome-container{
+        width: 90%;
+    }
+
+    .login-icon{
+        font-size: 2.5rem;
+    }
+
+    .login-heading, .signup-heading{
+        font-size: 2.6rem;
+    }
+
+    .login-text, .signup-text{
+        font-size: 1.3rem;
+    }
 }
 
 
 
 
-/* phone  */
+/*----------------------------- phone  ----------------------------------*/
 @media (min-width : 320px) and (max-width : 480px){
 
     .container-box{
@@ -1470,13 +1765,55 @@ color: var(--green);
     .owner-name{
         grid-column: 1/2;
     }
+
+    .user-img-box{
+        width: 110px;
+        height: 110px;
+    }
+
+    .Upload-photo{
+        font-size: 1.5rem;
+    }
+
+    .sidebar{
+        width: 100%;
+        gap: 0;
+    }
+
+    .sidebar-navlist{
+        padding: 1rem;
+    }
+
+    .sidebar-navlist>ul>li{
+        font-size: 1.5rem;
+    }
+
+    .login-container, .signup-container, .welcome-container{
+        width: 95%;
+    }
+
+    .right-login-box>div{
+        padding: 1rem;
+    }
+
+    .login-icon{
+        font-size: 2.5rem;
+    }
+
+    .login-heading, .signup-heading{
+        font-size: 2.6rem;
+    }
+
+    .login-text, .signup-text{
+        font-size: 1.3rem;
+    }
 }
 
 
 
 
 
-/*mini-phone  */
+/*-----------------------------mini-phone  ----------------------------------*/
 @media (min-width : 0px) and (max-width : 319px){
 
     .container-box{
@@ -1723,9 +2060,68 @@ color: var(--green);
     #logo-foot{
         font-size: 2rem;
     }
+
+    .user-img-box{
+        width: 100px;
+        height: 100px;
+    }
+
+    .sidebar{
+        width: 100%;
+        gap: 0;
+    }
+
+    .user-id>p{
+        font-size: 1.7rem;
+    }
+
+    .Upload-photo{
+        font-size: 1.5rem;
+    }
+
+    .sidebar-navlist{
+        padding: 1rem;
+    }
+
+    .sidebar-navlist>ul>li{
+        font-size: 1.2rem;
+    }
+
+    .login-container, .signup-container{
+        width: 95%;
+    }
+
+    .welcome-container{
+        width: 95%;
+        padding: 0.5rem;
+    }
+
+    .welcome-text{
+        font-size: 1.5rem;
+    }
+
+    .welcome-heading{
+        font-size: 1.5rem;
+    }
+
+    .right-login-box>div{
+        padding: 1rem;
+    }
+
+    .login-icon{
+        font-size: 2.5rem;
+    }
+
+    .login-heading, .signup-heading{
+        font-size: 2.6rem;
+    }
+
+    .login-text, .signup-text{
+        font-size: 1.3rem;
+    }
 }
 
-/* -------------------media-queries-end -------------------- */
+/*---------------------------------media-queries-end ----------------------------------*/
 
 
 

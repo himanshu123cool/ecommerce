@@ -18,542 +18,665 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- jquery-cdn  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- bootstrap-link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <!-- header-section-start  -->
+    <!------------------------ header-section-start  ----------------------------->
     <header id="header" class="container-box">
         <div class="left-head">
             <div>
-                <a class="left-head-text" href="tel:+6239208285"><i class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
+                <a class="left-head-text" href="tel:+6239208285"><i
+                        class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
             </div>
             <div>
-                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
+                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i
+                        class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
             </div>
             <div>
-                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
+                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i
+                        class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
             </div>
         </div>
         <div class="right-head">
             <a href="#" id="wishlist"><i class="fa-solid fa-heart wishlist"></i>WishList</a>
-            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i>My Account</a>
+            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i><span>Sign Up</span></a>
         </div>
     </header>
 
-    <div id="wrapper" class="container-box">
-        <div class="left-wrapper">
-            <a href="#" id="logo">E-<span>Commerce</span></a>
-        </div>
-        <div class="middle-wrapper">
-            <div class="search-box">
-                <input type="text" name="search" id="search" placeholder="search what you want to see">
-                <label for="search">
-                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                </label>
+
+    <div id="sticky-container">
+        <div id="wrapper" class="container-box">
+            <div class="left-wrapper">
+                <a href="#" id="logo">E-<span>Commerce</span></a>
+            </div>
+            <div class="middle-wrapper">
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="search what you want to see">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <button id="more" class="button"><a href="#">More</a></button>
+                <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
+                <i class="fa-solid fa-bars hamburger-icon"></i>
+                <div class="right-wrapper-container">
+                    <ul class="right-wrapper-menu">
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="right-wrapper">
-            <button id="more" class="button"><a href="#">More</a></button>
-            <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
-            <i class="fa-solid fa-bars hamburger-icon"></i>
-        <div class="right-wrapper-container">
-            <ul class="right-wrapper-menu">
-                <li><a href="#">Notification</a></li>
-                <li><a href="#">Advertise</a></li>
-                <li><a href="#">About</a></li>
+        <div class="sidebar">
+            <div class="close">
+                <i class="fa-solid fa-close close-icon"></i>
+            </div>
+            <div class="user-img-container">
+                <div class="user-img-box">
+                    <img src="./Media/user.png" alt="" class="user-img">
+                </div>
+                <input type="file" id="file">
+                <label class="Upload-photo" for="file">Upload Photo</label>
+                <div class="user-id">
+                    <p>User Name</p>
+                </div>
+            </div>
+            <div class="sidebar-navlist">
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <!------------------------ header-section-end  ----------------------------->
+
+
+
+
+
+        <!------------------------ login-form-section-start ----------------------------->
+
+        <section id="login-section" class="container-box">
+            <i class="fa-solid fa-close login-icon"></i>
+            <div class="login-container">
+                <div class="left-login-box">
+                    <p class="login-heading">Login</p>
+                    <br><br>
+                    <p class="login-text">Get Access to Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-login-box">
+                <div>
+                <div class="form-row-box">
+                    <input type="email" id="email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                </div>
+                <div class="form-row-box">
+                    <input type="password" id="password" placeholder="Enter Your Password" required minlength="8" maxlength="16">
+                </div>
+                <div class="form-row-box">
+                    <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                   <button class="view-btn" id="login-btn" onclick="loginData()">Login</button>
+                </div>
+                <div class="form-row-box">
+                   <p><a href="#">Forget Password?</a></p> 
+                   <p><a href="#" class="create-acc">New User? Create Account</a></p>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="signup-container">
+                <div class="left-signup-box">
+                    <p class="signup-heading">Sign Up</p>
+                    <br><br>
+                    <p class="signup-text">Sign Up to Access Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-signup-box">
+                    <div>
+                        <div class="form-row-box">
+                            <input type="text" id="sign-name" placeholder="Enter Your Full Name" required minlength="3" maxlength="25" autocomplete="off">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="email" id="sign-email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="password" id="sign-password" placeholder="Enter Your Password" required minlength="8">
+                        </div>
+                        <div class="form-row-box">
+                            <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            <button class="view-btn" id="signup-btn" onclick="saveData()">Sign Up</button>
+                        </div>
+                        <div class="form-row-box">
+                            <p><a href="#" class="existing-acc">Existing Account? login</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="welcome-container">
+                <p class="welcome-text">Sign Up Successfully</p>
+                <h2 class="welcome-heading">Welcome</h2>
+                <p class="welcome-character">Welcome</p>
+                <br>
+                <button class="view-btn" id="start-btn">Let Start</button>
+            </div>
+        </section>
+
+
+
+        <!------------------------ login-form-section-end ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+        <!------------------------ navbar-section-start  ----------------------------->
+        <nav id="navbar" class="container-box">
+            <ul class="menu">
+                <li><a href="#" class="nav-links">Men</a></li>
+                <li><a href="#" class="nav-links">Women</a></li>
+                <li><a href="#" class="nav-links">Mobile</a></li>
+                <li><a href="#" class="nav-links">Accessories</a></li>
+                <li><a href="#" class="nav-links">Kid</a></li>
+                <li><a href="#" class="nav-links">Beauty</a></li>
+                <li><a href="#" class="nav-links">Medicines</a></li>
+                <li><a href="#" class="nav-links">Electronic</a></li>
+                <li><a href="#" class="nav-links">Hot Deals</a></li>
             </ul>
-        </div>
-        </div>
+        </nav>
+        <!------------------------ navbar-section-end  ----------------------------->
     </div>
-    <!-- header-section-end  -->
 
 
 
-
-    <!-- navbar-section-start  -->
-    <nav id="navbar" class="container-box">
-        <ul class="menu">
-            <li><a href="#" class="nav-links">Men</a></li>
-            <li><a href="#" class="nav-links">Women</a></li>
-            <li><a href="#" class="nav-links">Mobile</a></li>
-            <li><a href="#" class="nav-links">Accessories</a></li>
-            <li><a href="#" class="nav-links">Kid</a></li>
-            <li><a href="#" class="nav-links">Beauty</a></li>
-            <li><a href="#" class="nav-links">Medicines</a></li>
-            <li><a href="#" class="nav-links">Electronic</a></li>
-            <li><a href="#" class="nav-links">Hot Deals</a></li>
-        </ul>
-    </nav>
-    <!-- navbar-section-end  -->
-
-
-
-
-
-
-    <!-- home-section-start  -->
+    <!------------------------ home-section-start  ----------------------------->
 
     <main id="home">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./Media/banner-1.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./Media/banner-2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./Media/banner-3.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./Media/banner-4.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./Media/banner-5.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="./Media/banner-6.jpg" class="d-block w-100" alt="...">
-              </div>
+                <div class="carousel-item active">
+                    <img src="./Media/banner-1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Media/banner-2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Media/banner-3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Media/banner-4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Media/banner-5.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Media/banner-6.jpg" class="d-block w-100" alt="...">
+                </div>
             </div>
-            <button id="prev" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button id="prev" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button id="next" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button id="next" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
     </main>
 
-    <!-- home-section-end  -->
+    <!------------------------ home-section-end  ----------------------------->
 
 
 
 
-    <!-- deal-section-start  -->
+    <!------------------------ deal-section-start  ----------------------------->
 
-<section id="deal-section" class="container-box">
-    <div class="deal-head">
-        <h2>Deal of the Day</h2>
-        <button class="view-btn"><a href="#">View All</a></button>
-    </div>
-    <div class="deal-body">
-        <div class="deal-body-1">
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./deal-img/deal-1.webp" alt="">
+    <section id="deal-section" class="container-box">
+        <div class="deal-head">
+            <h2>Deal of the Day</h2>
+            <button class="view-btn"><a href="#">View All</a></button>
+        </div>
+        <div class="deal-body">
+            <div class="deal-body-1">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./deal-img/deal-1.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Window and Door</p>
+                            <p class="product-discount">UPTO 70% OFF</p>
+                            <p class="caption">Grab Or Done !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Window and Door</p>
-                   <p class="product-discount">UPTO 70% OFF</p>
-                   <p class="caption">Grab Or Done !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./deal-img/deal-2.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./deal-img/deal-2.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Titan, Fastrack, Sonata..</p>
+                            <p class="product-discount">UPTO 70% OFF + 10% Extra</p>
+                            <p class="caption">Best Selling Styles !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Titan, Fastrack, Sonata..</p>
-                   <p class="product-discount">UPTO 70% OFF + 10% Extra</p>
-                   <p class="caption">Best Selling Styles !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./deal-img/deal-3.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./deal-img/deal-3.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Stylish Sunglasses</p>
+                            <p class="product-discount">UPTO 70% OFF +10% OFF</p>
+                            <p class="caption">Grab The Best Deal !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Stylish Sunglasses</p>
-                   <p class="product-discount">UPTO 70% OFF +10% OFF</p>
-                   <p class="caption">Grab The Best Deal !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./deal-img/deal-4.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./deal-img/deal-4.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">SuitCase, Lugguage, Bags</p>
+                            <p class="product-discount">UPTO 50%-70% OFF</p>
+                            <p class="caption">Safari, Amercian Tourister !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">SuitCase, Lugguage, Bags</p>
-                   <p class="product-discount">UPTO 50%-70% OFF</p>
-                   <p class="caption">Safari, Amercian Tourister !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./deal-img/deal-8.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./deal-img/deal-8.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Plum Best Sellers</p>
+                            <p class="product-discount">Min 15% + 20% Extra</p>
+                            <p class="caption">Lipstick, Kajals & More !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Plum Best Sellers</p>
-                   <p class="product-discount">Min 15% + 20% Extra</p>
-                   <p class="caption">Lipstick, Kajals & More !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./deal-img/deal-6.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./deal-img/deal-6.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Home Lightings</p>
+                            <p class="product-discount">UPTO 80% OFF</p>
+                            <p class="caption">Emergency Light & more !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Home Lightings</p>
-                   <p class="product-discount">UPTO 80% OFF</p>
-                   <p class="caption">Emergency Light & more !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./deal-img/deal-7.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./deal-img/deal-7.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Hand and Power Tools</p>
+                            <p class="product-discount">UPTO 70% OFF</p>
+                            <p class="caption">Popular Brand !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Hand and Power Tools</p>
-                   <p class="product-discount">UPTO 70% OFF</p>
-                   <p class="caption">Popular Brand !!</p>
-                </div>
-              </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- deal-section-end -->
-
+    <!------------------------ deal-section-end ----------------------------->
 
 
 
 
-<!-- trending-offer-start  -->
 
-<section id="trending-section" class="container-box">
-    <div class="trending-head">
-        <h2>Trending Offers</h2>
-        <button class="view-btn"><a href="#">View All</a></button>
-    </div>
-    <div class="trending-body">
-        <div class="trending-body-1">
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./trending/trend-1.webp" alt="">
-                </div>
-                <div class="product-text">
-                   <p class="product-name">Smart Watch Safeguard</p>
-                   <p class="product-discount">Special Offer</p>
-                   <p class="caption">Grab Now !!</p>
-                </div>
-              </a>
-            </div>
+    <!------------------------ trending-offer-start  ----------------------------->
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./trending/trend-2.webp" alt="">
+    <section id="trending-section" class="container-box">
+        <div class="trending-head">
+            <h2>Trending Offers</h2>
+            <button class="view-btn"><a href="#">View All</a></button>
+        </div>
+        <div class="trending-body">
+            <div class="trending-body-1">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./trending/trend-1.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Smart Watch Safeguard</p>
+                            <p class="product-discount">Special Offer</p>
+                            <p class="caption">Grab Now !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Women Sarees Fashion...</p>
-                   <p class="product-discount">10% Extra</p>
-                   <p class="caption">Best Selling Styles !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./trending/trend-3.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./trending/trend-2.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Women Sarees Fashion...</p>
+                            <p class="product-discount">10% Extra</p>
+                            <p class="caption">Best Selling Styles !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Men Shirt & Trouser..</p>
-                   <p class="product-discount">Top Offers</p>
-                   <p class="caption">Explore Now !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./trending/trend-4.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./trending/trend-3.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Men Shirt & Trouser..</p>
+                            <p class="product-discount">Top Offers</p>
+                            <p class="caption">Explore Now !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Women Sarees Fashion...</p>
-                   <p class="product-discount">UPTO 20% OFF</p>
-                   <p class="caption">Explore Now !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./trending/trend-5.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./trending/trend-4.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Women Sarees Fashion...</p>
+                            <p class="product-discount">UPTO 20% OFF</p>
+                            <p class="caption">Explore Now !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Wrist Watch Style...</p>
-                   <p class="product-discount">10% Extra</p>
-                   <p class="caption">Hurry, Don't Miss out !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./trending/trend-6.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./trending/trend-5.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Wrist Watch Style...</p>
+                            <p class="product-discount">10% Extra</p>
+                            <p class="caption">Hurry, Don't Miss out !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Women's Kurtas</p>
-                   <p class="product-discount">10% Extra</p>
-                   <p class="caption">Buy Now !!</p>
-                </div>
-              </a>
-            </div>
 
-            <div class="product-box">
-                <a href="#">
-                <div class="product-img">
-                    <img src="./trending/trend-7.webp" alt="">
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./trending/trend-6.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Women's Kurtas</p>
+                            <p class="product-discount">10% Extra</p>
+                            <p class="caption">Buy Now !!</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="product-text">
-                   <p class="product-name">Women's Ethnic Sets</p>
-                   <p class="product-discount">10% Extra</p>
-                   <p class="caption">Shop Now !!</p>
+
+                <div class="product-box">
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="./trending/trend-7.webp" alt="">
+                        </div>
+                        <div class="product-text">
+                            <p class="product-name">Women's Ethnic Sets</p>
+                            <p class="product-discount">10% Extra</p>
+                            <p class="caption">Shop Now !!</p>
+                        </div>
+                    </a>
                 </div>
-              </a>
             </div>
         </div>
-    </div>
-</section>
-<!-- trending-offer-end -->
+    </section>
+    <!------------------------ trending-offer-end ----------------------------->
 
 
 
 
 
 
-<!-- new-Arrival-section-start  -->
+    <!------------------------ new-Arrival-section-start  ----------------------------->
 
-<section id="newArrival" class="container-box">
-    <div class="newArrival-head">
-        <h2>New Arrival</h2>
-        <button class="view-btn"><a href="#">View All</a></button>
-    </div>
-    <div class="newArrival-body">
-        <div class="newArrival-body-1">
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-1.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
+    <section id="newArrival" class="container-box">
+        <div class="newArrival-head">
+            <h2>New Arrival</h2>
+            <button class="view-btn"><a href="#">View All</a></button>
+        </div>
+        <div class="newArrival-body">
+            <div class="newArrival-body-1">
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-1.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">boAt Storm 1.3" Curved Display Smartwatch, (Blue Strap, Regular)
+                        </p>
+                        <ul class="newArr-product-feature">
+                            <li>3.3 cms(1.3 inches) Full Touch Screen Curved Display with Multiple Cloud Based Watch
+                                Faces (Note: Cloud Based Watch Faces will be Available via OTA Post Launch)</li>
+                            <li>Wellness Mode: Spo2 (Real-time Blood Oxygen Level Monitor), 24x7 Heart Rate Monitor,
+                                Sleep monitor, Guided Breathing & Menstruation Tracker</li>
+                            <li>Metal Body Casing and 5ATM Water Resistance</li>
+                            <li>Daily Activity Tracker and 9 sports Modes | Notifications with Vibration Alerts for
+                                Calls, Texts, Social media, Alarms and Sedentary Alerts</li>
+                            <li>Touchscreen</li>
+                            <li>Fitness & Outdoor</li>
+                            <li>Battery Runtime: Upto 8 days</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 2499/-</h3>
+                        <p class="old-rate"><del>&#8377; 5990</del> <span class="discount"> 58% OFF</span> </p>
+                        <p class="delivery">Free Delivery</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-2.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Self Design Banarasi Silk Blend, Cotton Blend Saree (Black)</p>
+                        <ul class="newArr-product-feature">
+                            <li>Special PriceGet extra 10% off (price inclusive of discount)</li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                            <li>Cartyshop </li>
+                        </ul>
+                        <h3 class="rate">&#8377; 499/-</h3>
+                        <p class="old-rate"><del>&#8377; 3,999</del><span class="discount"> 87% OFF</span></p>
+                        <p class="delivery">Free Delivery</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-3.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Striped Men Round Neck Yellow, Black T-Shirt</p>
+                        <ul class="newArr-product-feature">
+                            <li>Special PriceGet extra 10% off (price inclusive of discount)</li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                            <li>Jump Cuts </li>
+                        </ul>
+                        <h3 class="rate">&#8377; 239/-</h3>
+                        <p class="old-rate"><del>&#8377; 1,390</del><span class="discount"> 82% OFF</span></p>
+                        <p class="delivery">&#8377; 50/- for Delivery Charge</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-4.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Women Embroidered Viscose Rayon Straight Kurta (Dark Blue)</p>
+                        <ul class="newArr-product-feature">
+                            <li>Special PriceGet extra 7% off (price inclusive of discount)</li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                            <li>FASHION DEPTH</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 549/-</h3>
+                        <p class="old-rate"><del>&#8377; 1,999</del><span class="discount"> 72% OFF</span></p>
+                        <p class="delivery">Free Delivery</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-5.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Infinix HOT 12 Play (Horizon Blue, 64 GB) (4 GB RAM)</p>
+                        <ul class="newArr-product-feature">
+                            <li>4 GB RAM | 64 GB ROM | Expandable Upto 256 GB</li>
+                            <li>17.32 cm (6.82 inch) HD+ Display</li>
+                            <li>6000 mAh Li-ion Polymer Battery</li>
+                            <li>Unisoc T610 Processor</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 8,699/-</h3>
+                        <p class="old-rate"><del>&#8377; 11,999</del><span class="discount"> 27% OFF</span></p>
+                        <p class="delivery">Free Delivery</p>
+                    </div>
+                </div>
             </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">boAt Storm 1.3" Curved Display Smartwatch, (Blue Strap, Regular)</p>
-                <ul class="newArr-product-feature">
-                    <li>3.3 cms(1.3 inches) Full Touch Screen Curved Display with Multiple Cloud Based Watch Faces (Note: Cloud Based Watch Faces will be Available via OTA Post Launch)</li>
-                    <li>Wellness Mode: Spo2 (Real-time Blood Oxygen Level Monitor), 24x7 Heart Rate Monitor, Sleep monitor, Guided Breathing & Menstruation Tracker</li>
-                    <li>Metal Body Casing and 5ATM Water Resistance</li>
-                    <li>Daily Activity Tracker and 9 sports Modes | Notifications with Vibration Alerts for Calls, Texts, Social media, Alarms and Sedentary Alerts</li>
-                    <li>Touchscreen</li>
-                    <li>Fitness & Outdoor</li>
-                    <li>Battery Runtime: Upto 8 days</li>
-                </ul>
-                <h3 class="rate">&#8377; 2499/-</h3>
-                <p class="old-rate"><del>&#8377; 5990</del> <span class="discount">  58% OFF</span> </p>
-                <p class="delivery">Free Delivery</p>
+
+            <div class="newArrival-body-1">
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-6.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Mens Black Sports Shoes For Running, Walking(Black)</p>
+                        <ul class="newArr-product-feature">
+                            <li>Special PriceGet extra 20% off (price inclusive of discount)</li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                            <li>JK PORT</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 499/-</h3>
+                        <p class="old-rate"><del>&#8377; 999</del><span class="discount"> 60% OFF</span></p>
+                        <p class="delivery">Free Delivery</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-7.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Zod Runner V3 Running Shoes For Men (Grey)</p>
+                        <ul class="newArr-product-feature">
+                            <li>Special PriceGet extra 10% off</li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                            <li>Special PriceGet at flat ₹299</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 1,299/-</h3>
+                        <p class="old-rate"><del>&#8377; 3,999</del><span class="discount"> 66% OFF</span></p>
+                        <p class="delivery">Free Delivery</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-8.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Fashionable Mens Shoes,Running Shoes For Men (red)</p>
+                        <ul class="newArr-product-feature">
+                            <li>Combo OfferBuy 2 items save 5%; Buy 3 or more save 10%</li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                            <li>Special PriceGet at flat ₹299</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 299/-</h3>
+                        <p class="old-rate"><del>&#8377; 999</del><span class="discount"> 60% OFF</span></p>
+                        <p class="delivery">&#8377; 50/- for Delivery Charge</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-9.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Printed Men Hooded Neck Black T-Shirt</p>
+                        <ul class="newArr-product-feature">
+                            <li>Smartees</li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 249/-</h3>
+                        <p class="old-rate"><del>&#8377; 1,599</del><span class="discount"> 84% OFF</span></p>
+                        <p class="delivery">&#8377; 50/- for Delivery Charge</p>
+                    </div>
+                </div>
+                <div class="newArr-product-box">
+                    <div class="newArr-img-box">
+                        <img src="./newArrival/new-10.webp" alt="" class="newArr-img">
+                        <i class="fa-solid fa-heart newArr-wishlist"></i>
+                    </div>
+                    <div class="newArr-text">
+                        <p class="newArr-product-name">Printed Men Hooded Neck Black T-Shirt</p>
+                        <ul class="newArr-product-feature">
+                            <li>Smartees </li>
+                            <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
+                            <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
+                            <li>Special PriceGet extra 31% off (price inclusive of discount)</li>
+                        </ul>
+                        <h3 class="rate">&#8377; 239/-</h3>
+                        <p class="old-rate"><del>&#8377; 999</del><span class="discount"> 76% OFF</span></p>
+                        <p class="delivery">&#8377; 50/- for Delivery Charge</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-2.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Self Design Banarasi Silk Blend, Cotton Blend Saree  (Black)</p>
-                <ul class="newArr-product-feature">
-                    <li>Special PriceGet extra 10% off (price inclusive of discount)</li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                    <li>Cartyshop </li>
-                </ul>
-                <h3 class="rate">&#8377; 499/-</h3>
-                <p class="old-rate"><del>&#8377; 3,999</del><span class="discount">  87% OFF</span></p>
-                <p class="delivery">Free Delivery</p>
-            </div>
-        </div>
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-3.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Striped Men Round Neck Yellow, Black T-Shirt</p>
-                <ul class="newArr-product-feature">
-                    <li>Special PriceGet extra 10% off (price inclusive of discount)</li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                    <li>Jump Cuts </li>
-                </ul>
-                <h3 class="rate">&#8377; 239/-</h3>
-                <p class="old-rate"><del>&#8377; 1,390</del><span class="discount">  82% OFF</span></p>
-                <p class="delivery">&#8377; 50/- for Delivery Charge</p>
-            </div>
-        </div>
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-4.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Women Embroidered Viscose Rayon Straight Kurta  (Dark Blue)</p>
-                <ul class="newArr-product-feature">
-                    <li>Special PriceGet extra 7% off (price inclusive of discount)</li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                    <li>FASHION DEPTH</li>
-                </ul>
-                <h3 class="rate">&#8377; 549/-</h3>
-                <p class="old-rate"><del>&#8377; 1,999</del><span class="discount">  72% OFF</span></p>
-                <p class="delivery">Free Delivery</p>
-            </div>
-        </div>
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-5.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Infinix HOT 12 Play (Horizon Blue, 64 GB)  (4 GB RAM)</p>
-                <ul class="newArr-product-feature">
-                    <li>4 GB RAM | 64 GB ROM | Expandable Upto 256 GB</li>
-                    <li>17.32 cm (6.82 inch) HD+ Display</li>
-                    <li>6000 mAh Li-ion Polymer Battery</li>
-                    <li>Unisoc T610 Processor</li>
-                </ul>
-                <h3 class="rate">&#8377; 8,699/-</h3>
-                <p class="old-rate"><del>&#8377; 11,999</del><span class="discount">  27% OFF</span></p>
-                <p class="delivery">Free Delivery</p>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <div class="newArrival-body-1">
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-6.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Mens Black Sports Shoes For Running, Walking(Black)</p>
-                <ul class="newArr-product-feature">
-                    <li>Special PriceGet extra 20% off (price inclusive of discount)</li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                    <li>JK PORT</li>
-                </ul>
-                <h3 class="rate">&#8377; 499/-</h3>
-                <p class="old-rate"><del>&#8377; 999</del><span class="discount">  60% OFF</span></p>
-                <p class="delivery">Free Delivery</p>
-            </div>
-        </div>
-       <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-7.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Zod Runner V3 Running Shoes For Men  (Grey)</p>
-                <ul class="newArr-product-feature">
-                    <li>Special PriceGet extra 10% off</li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                    <li>Special PriceGet at flat ₹299</li>
-                </ul>
-                <h3 class="rate">&#8377; 1,299/-</h3>
-                <p class="old-rate"><del>&#8377; 3,999</del><span class="discount">  66% OFF</span></p>
-                <p class="delivery">Free Delivery</p>
-            </div>
-        </div>
-         <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-8.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Fashionable Mens Shoes,Running Shoes For Men (red)</p>
-                <ul class="newArr-product-feature">
-                    <li>Combo OfferBuy 2 items save 5%; Buy 3 or more save 10%</li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                    <li>Special PriceGet at flat ₹299</li>
-                </ul>
-                <h3 class="rate">&#8377; 299/-</h3>
-                <p class="old-rate"><del>&#8377; 999</del><span class="discount">  60% OFF</span></p>
-                <p class="delivery">&#8377; 50/- for Delivery Charge</p>
-            </div>
-        </div>
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-9.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Printed Men Hooded Neck Black T-Shirt</p>
-                <ul class="newArr-product-feature">
-                    <li>Smartees</li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                </ul>
-                <h3 class="rate">&#8377; 249/-</h3>
-                <p class="old-rate"><del>&#8377; 1,599</del><span class="discount">  84% OFF</span></p>
-                <p class="delivery">&#8377; 50/- for Delivery Charge</p>
-            </div>
-        </div>
-        <div class="newArr-product-box">
-            <div class="newArr-img-box">
-                <img src="./newArrival/new-10.webp" alt="" class="newArr-img">
-                <i class="fa-solid fa-heart newArr-wishlist"></i>
-            </div>
-            <div class="newArr-text">
-                <p class="newArr-product-name">Printed Men Hooded Neck Black T-Shirt</p>
-                <ul class="newArr-product-feature">
-                    <li>Smartees </li>
-                    <li>Bank Offer5% Cashback on Flipkart Axis Bank Card</li>
-                    <li>Bank OfferFlat ₹100 Off* On 1st Transaction through Flipkart Pay Later</li>
-                    <li>Special PriceGet extra 31% off (price inclusive of discount)</li>
-                </ul>
-                <h3 class="rate">&#8377; 239/-</h3>
-                <p class="old-rate"><del>&#8377; 999</del><span class="discount">  76% OFF</span></p>
-                <p class="delivery">&#8377; 50/- for Delivery Charge</p>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-
-<!-- new-Arrival-section-end -->
+    <!------------------------ new-Arrival-section-end ----------------------------->
 
 
 
@@ -562,9 +685,9 @@
 
 
 
-<!-- explore-discount-section-start  -->
+    <!------------------------ explore-discount-section-start  ----------------------------->
 
-<section id="explore">
+    <section id="explore">
         <img src="./Discount/img-1.jpg" alt="">
         <div class="overlay">
             <p>Repair Services</p>
@@ -572,61 +695,111 @@
             <br>
             <button class="view-btn"><a href="#">Explore Now</a></button>
         </div>
-</section> 
- <!-- explore-discount-section-end  -->
+    </section>
+    <!------------------------ explore-discount-section-end  ----------------------------->
 
 
 
 
 
 
-<!--feature-item-section-start  -->
+    <!------------------------feature-item-section-start  ----------------------------->
 
-<section id="feature-section" class="container-box">
-    <div class="feature-head">
-        <h2>Feature Items</h2>
-    </div>
-    <div class="feature-body">
-        <div class="feature-product-box">
-            <a href="#"><img src="./Discount/img-2.webp" alt=""></a>
-            <div class="overlay-1">
-                <p>Women Dresses</p>
-                <h1>Up to <span>60%-70% OFF</span> - All Tops & Suits</h1>
+    <section id="feature-section" class="container-box">
+        <div class="feature-head">
+            <h2>Feature Items</h2>
+        </div>
+        <div class="feature-body">
+            <div class="feature-product-box">
+                <a href="#"><img src="./Discount/img-2.webp" alt=""></a>
+                <div class="overlay-1">
+                    <p>Women Dresses</p>
+                    <h1>Up to <span>60%-70% OFF</span> - All Tops & Suits</h1>
+                </div>
+            </div>
+            <div class="feature-product-box">
+                <a href="#"><img src="./Discount/img-3.webp" alt=""></a>
+                <div class="overlay-1">
+                    <p>Men's Footwear</p>
+                    <h1>Up to <span>70%-80% OFF</span> - All Sneakers & Sport Shoes</h1>
+                </div>
+            </div>
+            <div class="feature-product-box">
+                <a href="#"><img src="./Discount/img-4.webp" alt=""></a>
+                <div class="overlay-1">
+                    <p>Men Accessories</p>
+                    <h1>Up to <span>60%-65% OFF</span> - All Watch & Wrist Watch</h1>
+                </div>
+            </div>
+            <div class="feature-product-box">
+                <a href="#"><img src="./Discount/img-5.webp" alt=""></a>
+                <div class="overlay-1">
+                    <p>Men's Footwear</p>
+                    <h1>Up to <span>50%-70% OFF</span> - All Sport Shoes with HRX brand</h1>
+                </div>
+            </div>
+            <div class="feature-product-box" id="last-box">
+                <a href="#"><img src="./Discount/img-6.webp" alt=""></a>
+                <div class="overlay-1">
+                    <p>Digital Smart-Watch</p>
+                    <h1>Up to <span>60%-70% OFF</span> - All Digital Watch For Fashion</h1>
+                </div>
             </div>
         </div>
-        <div class="feature-product-box">
-            <a href="#"><img src="./Discount/img-3.webp" alt=""></a>
-            <div class="overlay-1">
-                <p>Men's Footwear</p>
-                <h1>Up to <span>70%-80% OFF</span> - All Sneakers & Sport Shoes</h1>
+    </section>
+
+    <!------------------------ feature-item-section-end  ----------------------------->
+
+
+
+
+
+
+
+
+    <!------------------------ newsletter-section-start  ----------------------------->
+
+    <section id="newsletter" class="container-box">
+        <div class="left-newsletter">
+            <h2>Sign Up For NewsLetters</h2>
+            <p>Get E-mail updates about our latest shop and special offers</p>
+        </div>
+        <div class="right-newsletter">
+            <div class="newsletter-input">
+                <input type="email" id="newsletter-email" placeholder="Your Email Address">
+                <label for="email">Sign Up</label>
             </div>
         </div>
-        <div class="feature-product-box">
-            <a href="#"><img src="./Discount/img-4.webp" alt=""></a>
-            <div class="overlay-1">
-                <p>Men Accessories</p>
-                <h1>Up to <span>60%-65% OFF</span> - All Watch & Wrist Watch</h1>
-            </div>
+    </section>
+
+    <!------------------------ newsletter-section-end ----------------------------->
+
+
+
+
+
+
+    <!------------------------ delivery-section-start  ----------------------------->
+
+    <section id="delivery" class="container-box">
+        <div class="delivery-box">
+            <i class="fa-solid fa-truck delivery-icon"></i>
+            <h4>Free Shipping</h4>
+            <p>Free Shipping for all India order</p>
         </div>
-        <div class="feature-product-box">
-            <a href="#"><img src="./Discount/img-5.webp" alt=""></a>
-            <div class="overlay-1">
-                <p>Men's Footwear</p>
-                <h1>Up to <span>50%-70% OFF</span> - All Sport Shoes with HRX brand</h1>
-            </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-headphones delivery-icon"></i>
+            <h4>Support 24/7</h4>
+            <p>We Support 24 hours a Day</p>
         </div>
-        <div class="feature-product-box" id="last-box">
-            <a href="#"><img src="./Discount/img-6.webp" alt=""></a>
-            <div class="overlay-1">
-                <p>Digital Smart-Watch</p>
-                <h1>Up to <span>60%-70% OFF</span> - All Digital Watch For Fashion</h1>
-            </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
+            <h4>100% Money Back</h4>
+            <p>You have 30 days to Return</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- feature-item-section-end  -->
-
+    <!------------------------ delivery-section-end   ----------------------------->
 
 
 
@@ -634,100 +807,54 @@
 
 
 
-<!-- newsletter-section-start  -->
 
-<section id="newsletter" class="container-box">
-    <div class="left-newsletter">
-        <h2>Sign Up For NewsLetters</h2>
-        <p>Get E-mail updates about our latest shop and special offers</p>
-    </div>
-    <div class="right-newsletter">
-        <div class="newsletter-input">
-            <input type="email" id="email" placeholder="Your Email Address">
-            <label for="email">Sign Up</label>
+    <!------------------------ footer-section-start  ----------------------------->
+
+    <footer id="footer-section" class="container-box">
+        <div class="footer-box">
+            <a href="#" id="logo-foot">E-<span>Commerce</span></a>
+            <br><br>
+            <p>354, Sector-10, Krishna Nagar, New Delhi</p>
+            <p>9873153589, 0120-765-322</p>
+            <p>Hours : 10:00 - 7:00 Mon-Sat</p>
+            <br>
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
         </div>
-    </div>
-</section>
-
-<!-- newsletter-section-end -->
-
-
-
-
-
-
-<!-- delivery-section-start  -->
-
-<section id="delivery" class="container-box">
-    <div class="delivery-box">
-        <i class="fa-solid fa-truck delivery-icon"></i>
-        <h4>Free Shipping</h4>
-        <p>Free Shipping for all India order</p>
-    </div>
-    <div class="delivery-box">
-        <i class="fa-solid fa-headphones delivery-icon"></i>
-        <h4>Support 24/7</h4>
-        <p>We Support 24 hours a Day</p>
-    </div>
-    <div class="delivery-box">
-        <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
-        <h4>100% Money Back</h4>
-        <p>You have 30 days to Return</p>
-    </div>
-</section>
-
-<!-- delivery-section-end   -->
-
-
-
-
-
-
-
-
-<!-- footer-section-start  -->
-
-<footer id="footer-section" class="container-box">
-    <div class="footer-box">
-        <a href="#" id="logo-foot">E-<span>Commerce</span></a>
-        <br><br>
-        <p>354, Sector-10, Krishna Nagar, New Delhi</p>
-        <p>9873153589, 0120-765-322</p>
-        <p>Hours : 10:00 - 7:00  Mon-Sat</p>
-        <br>
-        <h3>Follow Us</h3>
-        <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-    <div class="footer-box">
-        <h3>About</h3>
-        <br>
+        <div class="footer-box">
+            <h3>About</h3>
+            <br>
             <p><a href="#">About Us</a></p>
             <p><a href="#">Delivery Information</a></p>
             <p><a href="#">Privacy Policy</a></p>
             <p><a href="#">Terms & Conditions</a></p>
             <p><a href="#">Contact Us</a></p>
-    </div>
-    <div class="footer-box">
-        <h3>My Account</h3>
-        <br>
-            <p><a href="#">Sign In</a></p>
+        </div>
+        <div class="footer-box">
+            <h3>My Account</h3>
+            <br>
+            <p><a href="#" class="sign-in">Sign In</a></p>
             <p><a href="#">View Cart</a></p>
             <p><a href="#">My Wishlist</a></p>
             <p><a href="#">Notification</a></p>
             <p><a href="#">Help</a></p>
-    </div>
-    <div class="footer-box">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="owner-name">
-        <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/" target="_blank">Himanshu Sharma</a></p>
-    </div>
-</footer>
+        </div>
+        <div class="footer-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="owner-name">
+            <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/"
+                    target="_blank">Himanshu Sharma</a></p>
+        </div>
+    </footer>
 
-<!-- footer-section-end -->
+    <!------------------------ footer-section-end ----------------------------->
 
 
 
@@ -743,8 +870,10 @@
 
 
     <!-- bootstrap-js-link  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>

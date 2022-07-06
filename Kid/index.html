@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../Media/logo.png" type="image/x-icon">
+    <title>Ecommerce Website</title>
+    <!-- custom-css-link  -->
+    <link rel="stylesheet" href="../Kid/style.css">
+    <!-- custom-js- link -->
+    <script src="../Kid/script.js" defer></script>
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery-cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!------------------------ header-section-start  ----------------------------->
+    <header id="header" class="container-box">
+        <div class="left-head">
+            <div>
+                <a class="left-head-text" href="tel:+6239208285"><i
+                        class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i
+                        class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i
+                        class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
+            </div>
+        </div>
+        <div class="right-head">
+            <a href="#" id="wishlist"><i class="fa-solid fa-heart wishlist"></i>WishList</a>
+            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i><span>Sign Up</span></a>
+        </div>
+    </header>
+
+
+    <div id="sticky-container">
+        <div id="wrapper" class="container-box">
+            <div class="left-wrapper">
+                <a href="#" id="logo">E-<span>Commerce</span></a>
+            </div>
+            <div class="middle-wrapper">
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="search what you want to see">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <button id="more" class="button"><a href="#">More</a></button>
+                <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
+                <i class="fa-solid fa-bars hamburger-icon"></i>
+                <div class="right-wrapper-container">
+                    <ul class="right-wrapper-menu">
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="close">
+                <i class="fa-solid fa-close close-icon"></i>
+            </div>
+            <div class="user-img-container">
+                <div class="user-img-box">
+                    <img src="../Media/user.png" alt="" class="user-img">
+                </div>
+                <input type="file" id="file">
+                <label class="Upload-photo" for="file">Upload Photo</label>
+                <div class="user-id">
+                    <p>User Name</p>
+                </div>
+            </div>
+            <div class="sidebar-navlist">
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!------------------------ header-section-end  ----------------------------->
+
+
+
+
+        <!------------------------ login-form-section-start ----------------------------->
+
+        <section id="login-section" class="container-box">
+            <i class="fa-solid fa-close login-icon"></i>
+            <div class="login-container">
+                <div class="left-login-box">
+                    <p class="login-heading">Login</p>
+                    <br><br>
+                    <p class="login-text">Get Access to Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-login-box">
+                <div>
+                <div class="form-row-box">
+                    <input type="email" id="email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                </div>
+                <div class="form-row-box">
+                    <input type="password" id="password" placeholder="Enter Your Password" required minlength="8" maxlength="16">
+                    <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                    <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="form-row-box">
+                    <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                   <button class="view-btn" id="login-btn" onclick="loginData()">Login</button>
+                </div>
+                <div class="form-row-box">
+                   <p><a href="#">Forget Password?</a></p> 
+                   <p><a href="#" class="create-acc">New User? Create Account</a></p>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="signup-container">
+                <div class="left-signup-box">
+                    <p class="signup-heading">Sign Up</p>
+                    <br><br>
+                    <p class="signup-text">Sign Up to Access Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-signup-box">
+                    <div>
+                        <div class="form-row-box">
+                            <input type="text" id="sign-name" placeholder="Enter Your Full Name" required minlength="3" maxlength="25" autocomplete="off">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="email" id="sign-email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="password" id="sign-password" placeholder="Enter Your Password" required minlength="8">
+                            <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                            <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-row-box">
+                            <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            <button class="view-btn" id="signup-btn" onclick="saveData()">Sign Up</button>
+                        </div>
+                        <div class="form-row-box">
+                            <p><a href="#" class="existing-acc">Existing Account? login</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="welcome-container">
+                <p class="welcome-text">Sign Up Successfully</p>
+                <h2 class="welcome-heading">Welcome</h2>
+                <p class="welcome-character">Welcome</p>
+                <br>
+                <button class="view-btn" id="start-btn">Let Start</button>
+            </div>
+        </section>
+
+
+        
+        <!------------------------ login-form-section-end ----------------------------->
+        
+        
+
+
+
+
+
+
+    <!---------------------------men-section-start-------------------------->
+
+    <section id="men-section" class="container-box">
+        <div class="upper-men-container">
+            <div class="btns-box">
+                <div class="product-filter-btn active" data-filter="ALL">ALL</div>
+                <div class="product-filter-btn" data-filter="boy-clothes">Boy-Clothes</div>
+                <div class="product-filter-btn" data-filter="girl-clothes">Girl-Clothes</div>
+                <div class="product-filter-btn" data-filter="foot-wear">Foot Wear</div>
+                <div class="product-filter-btn" data-filter="toys">Toys</div>
+                <div class="product-filter-btn" data-filter="baby-care">Baby Care</div>
+            </div>
+        </div>
+        <div class="lower-men-container">
+            <div class="product-box baby-care">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kz5vwy80/bath-towel/2/e/d/new-born-baby-towel-pack-of-hooded-wrapper-swaddle-for-baby-boys-original-imagb8fkbvmhw9dq.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Baby Care Product</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="product-box baby-care">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/jwqpocw0/bath-towel/n/z/t/babies-premium-towel-red-angry-brandonn-original-imaffwqvgta8yh3k.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Baby Care Product</p>
+                    <h3 class="product-rate">550/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/krme93k0/kid-costume-wear/m/m/f/12-12-18-months-little-baby-krishna-dress-for-kids-janmashtami-original-imag5d9msqhckkzz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l3g7gy80/kids-t-shirt/o/y/g/8-9-years-bnvwtrnful-bz13-blive-original-imagekg3ynzmg7z9.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/ksru0sw0/kids-ethnic-set/v/x/f/2-3-years-digibc001-digimart-original-imag69ha2hensycf.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">251/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/k4rcmfk0/bloomer-drawer/x/7/a/9-10-years-v-1788-vastramilap-original-imafhnwzgqtgtzug.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">130/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l2urv680/kids-t-shirt/5/b/l/6-7-years-k45-fs-thunder-white-lewel-original-image4y7k4kgebw2.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">220/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kxkqavk0/kids-ethnic-set/s/v/m/9-10-years-smartwhitekp1-ftc-fashions-original-imag9zt8gus5qewe.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jumzc7k0/kids-ethnic-set/d/x/p/1-2-years-modi-rjacket-33-6-12-month-new-gen-original-imaffzrdkhavzwpm.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">650/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kffq2kw0/kids-ethnic-set/t/m/g/2-3-years-boys-307-yellow-20-new-gen-original-imafvw7zxfwykzz9.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">789/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kmds4nk0/kids-t-shirt/5/0/o/13-14-years-cut-n-sew-combo-x2o-original-imagfat976egdey4.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l05lx8w0/kids-t-shirt/o/u/u/6-7-years-bln-hfs-109-3-billion-original-imagcy2r29gpxhyk.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jd3epow0/kids-ethnic-set/6/z/s/3-4-years-tdk-21-ftc-fashions-original-imaf237gbqpb9gwg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box boy-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kp2y2kw0/kid-costume-wear/q/s/5/5-5-6-years-army63-radhakrishna-textile-market-6-original-imag3efhznyptcyw.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Boy Clothes</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            
+            
+
+            
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/krme93k0/kid-costume-wear/m/m/f/12-12-18-months-little-baby-krishna-dress-for-kids-janmashtami-original-imag5d9msqhckkzz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ksnjp8w0/kids-dress/j/i/p/11-12-years-gf0040p-provogue-original-imag66crehdzesha.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l0y6qa80/kids-lehenga-choli/v/l/u/4-5-years-gajra-the-fashion-prime-original-imagcmgezfqsknry.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k4rcmfk0/bloomer-drawer/x/7/a/9-10-years-v-1788-vastramilap-original-imafhnwzgqtgtzug.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kqco5u80/kids-lehenga-choli/l/j/6/7-8-years-fp-k-bindi-f-plus-fashion-original-imag4dqfef8cgau3.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l33cia80/kids-sandal/5/h/i/5c-zoom-kick-up-original-imageahugggju6cj.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l16rde80/kids-sandal/f/l/d/3c-baby-sandal-surf-neobaby-original-imagct8bptghgehj.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l0y6qa80/kids-sandal/y/e/x/7c-glitter-levot-original-imagcmgrxuwyhjwh.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l3uhvgw0/kids-dungaree-romper/s/u/n/4-5-years-yellow-dungaree-ftc-fashions-original-imagevhz2kjrn3cg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l37mtu80/kids-apparel-combo/u/d/k/3-6-months-red-pocket-combo-em-dresses-original-imagednznsgmzsjt.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kxtaxzk0/kids-ethnic-set/a/v/i/2-3-years-ng-227-pink-20-new-gen-original-imaga6s6epmhayvn.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kwmfqfk0/kids-dress/f/8/8/6-9-months-baby-girl-printed-cotton-summer-wear-frock-dresses-original-imag99hhqcevphyq.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box girl-clothes">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kfh5ifk0/kids-apparel-combo/q/j/h/4-5-years-cpgl0034-black-chandrika-original-imafvwugnke4t3nh.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid Girl Clothes</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        
+            
+
+
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l0e6kcw0/kids-sandal/s/o/m/8c-fun-1-chu-chu-sandal-for-kids-aircity-original-imagc6qjanhad9sf.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ktszgy80/bootie/p/y/d/0-18-am1802-a-angel-mommy-9-original-imag72k7gmgkyent.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/knxiavk0/bootie/7/p/u/kb-04-tarun-child-care-original-imag2g8nkugmfygc.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kjym9ow0/kids-shoe/k/w/b/8c-dc-1-neobaby-original-imafzffhm4cabndq.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kndi4y80/kids-sandal/k/v/m/10c-b-clogs-billion-original-imag22hq3xhugdgf.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k4a7c7k0/kids-sandal/s/a/e/5c-clog-7-neobaby-original-imafn2fhkqzfbnuh.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ku5ufm80/kids-shoe/m/e/n/8c-2fan-smile-neobaby-original-imag7ck2h3g7mzac.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l4hcx3k0/kids-sandal/j/n/e/13c-90056-brown-steprite-original-imagfdhgf6uzjyzp.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l16rde80/kids-sandal/u/a/h/4c-baby-sandal-surf-neobaby-original-imagct8byszhrbfu.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Foot Wear</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kyyqpow0/diary-notebook/o/g/a/magic-practice-copybook-number-tracing-book-for-preschoolers-original-imagb2c4ath9vf2x.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kh6lg280/learning-toy/q/z/7/lcd1-vihaana-enterprise-original-imafx8g4x4zngbuh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/krjjde80/block-construction/p/h/o/100-best-quality-gift-100-pcs-building-blocks-creative-learning-original-imag5byubgdgz9gk.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l09w8sw0/puzzle/r/n/j/1-drift-warrior-3x3-stickerless-speedcube-highspeed-magic-cube-original-imagc3gpnk4hsagz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">1,099/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kp78e4w0/block-construction/h/f/p/best-buy-happy-house-building-blocks-creative-learning-toy-original-imag3hkumzh5xmbs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jxz0brk0/stuffed-toy/n/t/s/4-feet-pink-very-beautiful-best-quality-for-special-gift-125-13-original-imafgv92puzkdytg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kb9ou4w0/stuffed-toy/h/v/y/teddy-bear-white-color-soft-rabbit-cuddle-huggable-30-cm-30-original-imafsngsg59y43zj.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kq18n0w0/toy-tricycle/o/t/q/4006-black-baby-smile-original-imag4522gvxhmpzs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">1,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqse07k0/outdoor-toy/s/h/w/play-tent-house-for-kids-in-jungle-theme-miss-chief-original-imag4pv8z8ddf8hc.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4iscy80/stuffed-toy/t/9/t/cool-pink-2-feetteddy-bears-huggable-valentine-loveable-for-original-imagfebtmkfjbmjv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box toys">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kly2aa80/puzzle/q/p/w/36-36-pieces-mini-puzzle-foam-mat-for-kids-interlocking-learning-original-imagyyguj6zxkqvv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kid's Amazing Toys</p>
+                    <h3 class="product-rate">490/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="product-box baby-care">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kua4r680/diaper/w/d/v/comfy-baby-pants-diapers-with-wetness-indicator-and-12-hours-original-imag7fnbwdhnrse9.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Baby Care Product</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box baby-care">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/ky3b0y80/body-skin-treatment/w/7/v/-original-imagaedzdvz6art6.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Baby Care Product</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box baby-care">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/km57hjk0/bath-towel/j/h/k/cotton-bath-towels-full-size-for-men-women-2-rudra-2pc-pk-gr-original-imagf4dhgdfhdapc.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Baby Care Product</p>
+                    <h3 class="product-rate">199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!---------------------------men-section-end---------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ delivery-section-start  ----------------------------->
+
+    <section id="delivery" class="container-box">
+        <div class="delivery-box">
+            <i class="fa-solid fa-truck delivery-icon"></i>
+            <h4>Free Shipping</h4>
+            <p>Free Shipping for all India order</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-headphones delivery-icon"></i>
+            <h4>Support 24/7</h4>
+            <p>We Support 24 hours a Day</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
+            <h4>100% Money Back</h4>
+            <p>You have 30 days to Return</p>
+        </div>
+    </section>
+
+    <!------------------------ delivery-section-end   ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ footer-section-start  ----------------------------->
+
+    <footer id="footer-section" class="container-box">
+        <div class="footer-box">
+            <a href="#" id="logo-foot">E-<span>Commerce</span></a>
+            <br><br>
+            <p>354, Sector-10, Krishna Nagar, New Delhi</p>
+            <p>9873153589, 0120-765-322</p>
+            <p>Hours : 10:00 - 7:00 Mon-Sat</p>
+            <br>
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <br>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Delivery Information</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-box">
+            <h3>My Account</h3>
+            <br>
+            <p><a href="#" class="sign-in">Sign In</a></p>
+            <p><a href="#">View Cart</a></p>
+            <p><a href="#">My Wishlist</a></p>
+            <p><a href="#">Notification</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+        <div class="footer-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="owner-name">
+            <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/"
+                    target="_blank">Himanshu Sharma</a></p>
+        </div>
+    </footer>
+
+    <!------------------------ footer-section-end ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap-js-link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../Media/logo.png" type="image/x-icon">
+    <title>Ecommerce Website</title>
+    <!-- custom-css-link  -->
+    <link rel="stylesheet" href="../Beauty/style.css">
+    <!-- custom-js- link -->
+    <script src="../Beauty/script.js" defer></script>
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery-cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!------------------------ header-section-start  ----------------------------->
+    <header id="header" class="container-box">
+        <div class="left-head">
+            <div>
+                <a class="left-head-text" href="tel:+6239208285"><i
+                        class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i
+                        class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i
+                        class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
+            </div>
+        </div>
+        <div class="right-head">
+            <a href="#" id="wishlist"><i class="fa-solid fa-heart wishlist"></i>WishList</a>
+            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i><span>Sign Up</span></a>
+        </div>
+    </header>
+
+
+    <div id="sticky-container">
+        <div id="wrapper" class="container-box">
+            <div class="left-wrapper">
+                <a href="#" id="logo">E-<span>Commerce</span></a>
+            </div>
+            <div class="middle-wrapper">
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="search what you want to see">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <button id="more" class="button"><a href="#">More</a></button>
+                <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
+                <i class="fa-solid fa-bars hamburger-icon"></i>
+                <div class="right-wrapper-container">
+                    <ul class="right-wrapper-menu">
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="close">
+                <i class="fa-solid fa-close close-icon"></i>
+            </div>
+            <div class="user-img-container">
+                <div class="user-img-box">
+                    <img src="../Media/user.png" alt="" class="user-img">
+                </div>
+                <input type="file" id="file">
+                <label class="Upload-photo" for="file">Upload Photo</label>
+                <div class="user-id">
+                    <p>User Name</p>
+                </div>
+            </div>
+            <div class="sidebar-navlist">
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!------------------------ header-section-end  ----------------------------->
+
+
+
+
+        <!------------------------ login-form-section-start ----------------------------->
+
+        <section id="login-section" class="container-box">
+            <i class="fa-solid fa-close login-icon"></i>
+            <div class="login-container">
+                <div class="left-login-box">
+                    <p class="login-heading">Login</p>
+                    <br><br>
+                    <p class="login-text">Get Access to Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-login-box">
+                <div>
+                <div class="form-row-box">
+                    <input type="email" id="email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                </div>
+                <div class="form-row-box">
+                    <input type="password" id="password" placeholder="Enter Your Password" required minlength="8" maxlength="16">
+                    <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                    <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="form-row-box">
+                    <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                   <button class="view-btn" id="login-btn" onclick="loginData()">Login</button>
+                </div>
+                <div class="form-row-box">
+                   <p><a href="#">Forget Password?</a></p> 
+                   <p><a href="#" class="create-acc">New User? Create Account</a></p>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="signup-container">
+                <div class="left-signup-box">
+                    <p class="signup-heading">Sign Up</p>
+                    <br><br>
+                    <p class="signup-text">Sign Up to Access Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-signup-box">
+                    <div>
+                        <div class="form-row-box">
+                            <input type="text" id="sign-name" placeholder="Enter Your Full Name" required minlength="3" maxlength="25" autocomplete="off">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="email" id="sign-email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="password" id="sign-password" placeholder="Enter Your Password" required minlength="8">
+                            <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                            <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-row-box">
+                            <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            <button class="view-btn" id="signup-btn" onclick="saveData()">Sign Up</button>
+                        </div>
+                        <div class="form-row-box">
+                            <p><a href="#" class="existing-acc">Existing Account? login</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="welcome-container">
+                <p class="welcome-text">Sign Up Successfully</p>
+                <h2 class="welcome-heading">Welcome</h2>
+                <p class="welcome-character">Welcome</p>
+                <br>
+                <button class="view-btn" id="start-btn">Let Start</button>
+            </div>
+        </section>
+
+
+
+        <!------------------------ login-form-section-end ----------------------------->
+
+
+
+
+
+
+
+
+    <!---------------------------men-section-start-------------------------->
+
+    <section id="men-section" class="container-box">
+        <div class="upper-men-container">
+            <div class="btns-box">
+                <div class="product-filter-btn active" data-filter="ALL">ALL</div>
+                <div class="product-filter-btn" data-filter="men">Men</div>
+                <div class="product-filter-btn" data-filter="women">Women</div>
+                <div class="product-filter-btn" data-filter="kid">Kid</div>
+            </div>
+        </div>
+        <div class="lower-men-container">
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l0fm07k0/face-pack/k/0/j/-original-imagc82spjdbeeyx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kiew3gw0/fairness/9/u/u/l-glutathione-cream-for-skin-whitening-anti-ageing-and-glass-original-imafy7g6urpuvfs5.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l111lzk0/combo-kit/o/p/l/must-have-makeup-set-fair-6-8906074713742-iba-original-imagcztsjnsngcnc.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kzk6bgw0/hair-accessory/0/g/9/hair-clip-for-girls-kids-baby-women-styling-hair-accessories-1-original-imagbjugmeyfwfjp.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="product-box men">
+                <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/612/612/jw2f6vk0/combo-kit/f/u/8/men-body-lotion-and-beard-growth-serum-escbloserum01-escobar-original-imafgubc659ehyva.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">251/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k7w8eq80/combo-kit/z/z/m/charcoal-face-wash-scrub-cfws-fantraa-original-imafqfb27z5hhb7g.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">130/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kuczmvk0/combo-kit/0/n/g/charcoal-express-gift-set-tmc-web-224t-the-man-company-original-imag7huhktz8kf9g.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">220/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/jjubki80/combo-kit/e/p/a/dermist-psoriasis-combo-astcombo-astrel-original-imaf7c5y7ghmgjty.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/jjubki80/combo-kit/m/y/w/dermist-monthly-pack-350-2-1-astmpack-astrel-original-imaf7c63hfzdhba9.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">650/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l0mr7gw0/combo-kit/q/r/v/best-unisex-face-cleansing-skin-glow-products-combo-for-men-original-imagcdfeyge8zfyy.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">789/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/612/612/jst930w0/combo-kit/u/u/b/ultimate-lift-set-5-full-size-products-31773-oriflame-original-imafdtb5vzcqgmgk.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/ks99aq80/toner/r/g/c/200-premium-kewra-water-100-ml-rose-hair-removal-powder-100-gms-original-imag5uzez5bgzh5z.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/612/612/kpsnzww0/combo-kit/h/d/i/skin-whitening-facewash-100ml-and-biocare-fruit-scrub-500ml-prfw-original-imag3y5rzqbyyw6z.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kgjqefk0/combo-kit/y/3/f/charcoal-combo-of-peel-off-mask-face-wash-and-face-scrub-paraben-original-imafwrg5zgr8awmz.jpeg?q=90" alt="" class="product-img">
+            </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Beauty Product</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+
+
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kwmfqfk0/moisturizer-cream/q/z/x/-original-imag998smbvgwhhh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kzrbiq80/fairness/d/a/s/25-derma15-1-royalstar-original-imagbp4yd9rebhe4.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kwfaj680/moisturizer-cream/v/c/m/50-naked-detox-green-tea-night-gel-hydration-vitamin-c-original-imag93ndrzucr7fa.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kzllrbk0/lip-balm/x/s/s/12-coffee-lip-scrub-for-chapped-pigmented-lips-100-vegan-with-original-imagbktnapsy36st.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kox8b680/hair-removal/h/h/o/100-bikini-line-hair-remover-creme-natural-for-women-100g-cream-original-imag39zxgkhndech.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kzllrbk0/lip-balm/i/g/s/10-coffee-lip-polishing-oil-for-pigmented-dry-lips-1-mcaffeine-original-imagbkrgns4wuhfs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/hair-treatment/z/k/n/200-bringha-hair-strengthening-lepam-indulekha-original-imagcgs4rn2z5nng.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k0flmkw0/moisturizer-cream/p/6/9/50-chia-seed-hydro-cream-the-face-shop-cream-original-imafk7hhkekkvbyz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l3ys70w0/moisturizer-cream/j/3/q/30-advanced-activs-crystal-clear-no-more-acne-power-serum-with-2-original-imageyruwymh3y7f.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Beauty Product</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        
+            
+
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/koad9jk0/hair-accessory/x/j/z/hair-accessories-for-women-stylish-bandsof-girls-latest-hairband-original-imag2rcdfhacjjv8.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+                <div class="product-box men">
+                    <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/612/612/l1zc6fk0/combo-kit/i/g/s/de-tan-power-combo-2-tmc-web-448t-the-man-company-original-imagdfngxe58yc4j.jpeg?q=70" alt="" class="product-img">
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-name">Men Beauty Product</p>
+                        <h3 class="product-rate">599/-</h3>
+                        <div class="cart-wish-btn">
+                            <button class="wish add-btn">Wishlist</button>
+                            <button class="cart add-btn">Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-box men">
+                    <div class="product-img-box">
+                        <img src="https://rukminim1.flixcart.com/image/612/612/l4ssfww0/cleanser/m/t/l/130-men-s-herbal-skin-lightening-oil-haldi-enriched-foam-face-original-imagfm4g4rahgatp.jpeg?q=70" alt="" class="product-img">
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-name">Men Beauty Product</p>
+                        <h3 class="product-rate">499/-</h3>
+                        <div class="cart-wish-btn">
+                            <button class="wish add-btn">Wishlist</button>
+                            <button class="cart add-btn">Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/jzzvs7k0/hair-accessory/g/e/q/multicolour-baby-girl-kids-hairband-headbands-3-headband-3-36-original-imafjv8h45nqtaqb.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kixgtjk0-0/hair-accessory/e/k/c/hair-accessories-korean-style-pom-pom-fur-plastic-hairband-original-imafyhx9hpgwscwk.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kwfaj680/moisturizer-cream/v/c/m/50-naked-detox-green-tea-night-gel-hydration-vitamin-c-original-imag93ndrzucr7fa.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/krjjde80/hair-accessory/c/l/b/hair-accessories-for-women-stylish-bandsof-girls-latest-hairband-original-imag5b4zyzvabh59.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kkvhea80/hair-accessory/n/d/p/fur-style-hairband-gift-for-girls-fancy-hairband-kids-hairband-original-imagy4gzh2fwumzr.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/koad9jk0/hair-accessory/u/s/x/hair-accessories-for-women-stylish-bandsof-girls-latest-hairband-original-imag2sb2w5txnkdj.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/koixwnk0/hair-accessory/6/f/b/hair-clips-for-girls-women-stylish-baby-clipper-latest-designer-original-imag2yrzrnzyjegx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kqttg280/hand-wash-sanitizer/j/s/u/540-child-protection-spray-fights-99-9-germs-powered-by-ecorsani-original-imag4qjzb76bgdfz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/koad9jk0/hair-accessory/x/4/x/hair-accessories-for-women-stylish-bandsof-girls-latest-hairband-original-imag2rcdcbx7txyd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Beauty Product</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!---------------------------men-section-end---------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ delivery-section-start  ----------------------------->
+
+    <section id="delivery" class="container-box">
+        <div class="delivery-box">
+            <i class="fa-solid fa-truck delivery-icon"></i>
+            <h4>Free Shipping</h4>
+            <p>Free Shipping for all India order</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-headphones delivery-icon"></i>
+            <h4>Support 24/7</h4>
+            <p>We Support 24 hours a Day</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
+            <h4>100% Money Back</h4>
+            <p>You have 30 days to Return</p>
+        </div>
+    </section>
+
+    <!------------------------ delivery-section-end   ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ footer-section-start  ----------------------------->
+
+    <footer id="footer-section" class="container-box">
+        <div class="footer-box">
+            <a href="#" id="logo-foot">E-<span>Commerce</span></a>
+            <br><br>
+            <p>354, Sector-10, Krishna Nagar, New Delhi</p>
+            <p>9873153589, 0120-765-322</p>
+            <p>Hours : 10:00 - 7:00 Mon-Sat</p>
+            <br>
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <br>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Delivery Information</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-box">
+            <h3>My Account</h3>
+            <br>
+            <p><a href="#" class="sign-in">Sign In</a></p>
+            <p><a href="#">View Cart</a></p>
+            <p><a href="#">My Wishlist</a></p>
+            <p><a href="#">Notification</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+        <div class="footer-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="owner-name">
+            <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/"
+                    target="_blank">Himanshu Sharma</a></p>
+        </div>
+    </footer>
+
+    <!------------------------ footer-section-end ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap-js-link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

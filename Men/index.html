@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../Media/logo.png" type="image/x-icon">
+    <title>Ecommerce Website</title>
+    <!-- custom-css-link  -->
+    <link rel="stylesheet" href="../Men/style.css">
+    <!-- custom-js- link -->
+    <script src="../Men/script.js" defer></script>
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery-cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!------------------------ header-section-start  ----------------------------->
+    <header id="header" class="container-box">
+        <div class="left-head">
+            <div>
+                <a class="left-head-text" href="tel:+6239208285"><i
+                        class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i
+                        class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i
+                        class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
+            </div>
+        </div>
+        <div class="right-head">
+            <a href="#" id="wishlist"><i class="fa-solid fa-heart wishlist"></i>WishList</a>
+            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i><span>Sign Up</span></a>
+        </div>
+    </header>
+
+
+    <div id="sticky-container">
+        <div id="wrapper" class="container-box">
+            <div class="left-wrapper">
+                <a href="#" id="logo">E-<span>Commerce</span></a>
+            </div>
+            <div class="middle-wrapper">
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="search what you want to see">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <button id="more" class="button"><a href="#">More</a></button>
+                <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
+                <i class="fa-solid fa-bars hamburger-icon"></i>
+                <div class="right-wrapper-container">
+                    <ul class="right-wrapper-menu">
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="close">
+                <i class="fa-solid fa-close close-icon"></i>
+            </div>
+            <div class="user-img-container">
+                <div class="user-img-box">
+                    <img src="../Media/user.png" alt="" class="user-img">
+                </div>
+                <input type="file" id="file">
+                <label class="Upload-photo" for="file">Upload Photo</label>
+                <div class="user-id">
+                    <p>User Name</p>
+                </div>
+            </div>
+            <div class="sidebar-navlist">
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!------------------------ header-section-end  ----------------------------->
+
+
+
+
+        <!------------------------ login-form-section-start ----------------------------->
+
+        <section id="login-section" class="container-box">
+            <i class="fa-solid fa-close login-icon"></i>
+            <div class="login-container">
+                <div class="left-login-box">
+                    <p class="login-heading">Login</p>
+                    <br><br>
+                    <p class="login-text">Get Access to Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-login-box">
+                <div>
+                <div class="form-row-box">
+                    <input type="email" id="email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                </div>
+                <div class="form-row-box">
+                    <input type="password" id="password" placeholder="Enter Your Password" required minlength="8" maxlength="16">
+                    <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                    <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="form-row-box">
+                    <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                   <button class="view-btn" id="login-btn" onclick="loginData()">Login</button>
+                </div>
+                <div class="form-row-box">
+                   <p><a href="#">Forget Password?</a></p> 
+                   <p><a href="#" class="create-acc">New User? Create Account</a></p>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="signup-container">
+                <div class="left-signup-box">
+                    <p class="signup-heading">Sign Up</p>
+                    <br><br>
+                    <p class="signup-text">Sign Up to Access Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-signup-box">
+                    <div>
+                        <div class="form-row-box">
+                            <input type="text" id="sign-name" placeholder="Enter Your Full Name" required minlength="3" maxlength="25" autocomplete="off">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="email" id="sign-email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="password" id="sign-password" placeholder="Enter Your Password" required minlength="8">
+                            <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                            <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-row-box">
+                            <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            <button class="view-btn" id="signup-btn" onclick="saveData()">Sign Up</button>
+                        </div>
+                        <div class="form-row-box">
+                            <p><a href="#" class="existing-acc">Existing Account? login</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="welcome-container">
+                <p class="welcome-text">Sign Up Successfully</p>
+                <h2 class="welcome-heading">Welcome</h2>
+                <p class="welcome-character">Welcome</p>
+                <br>
+                <button class="view-btn" id="start-btn">Let Start</button>
+            </div>
+        </section>
+
+
+
+        <!------------------------ login-form-section-end ----------------------------->
+
+        
+        
+
+
+
+
+
+        <!---------------------------men-section-start-------------------------->
+        
+    <section id="men-section" class="container-box">
+        <div class="upper-men-container">
+            <div class="btns-box">
+                <div class="product-filter-btn active" data-filter="ALL">ALL</div>
+                <div class="product-filter-btn" data-filter="foot-wear">Foot Wear</div>
+                <div class="product-filter-btn" data-filter="men-grooming">Men's Grooming</div>
+                <div class="product-filter-btn" data-filter="top-wear">Top Wear</div>
+                <div class="product-filter-btn" data-filter="bottom-wear">Bottom Wear</div>
+                <div class="product-filter-btn" data-filter="suits-blazers">Suits, Blazers</div>
+                <div class="product-filter-btn" data-filter="tie-shocks">Tie, Shocks</div>
+                <div class="product-filter-btn" data-filter="winter-wear">Winter Wear</div>
+                <div class="product-filter-btn" data-filter="ethnic-wear">Ethnic Wear</div>
+                <div class="product-filter-btn" data-filter="inner-wear">Inner Wear</div>
+                <div class="product-filter-btn" data-filter="raincoat">Raincoat</div>
+                <div class="product-filter-btn" data-filter="watch">Watch</div>
+                <div class="product-filter-btn" data-filter="accessories">Accessories</div>
+                <div class="product-filter-btn" data-filter="personal-care">Personal Care</div>
+            </div>
+        </div>
+        <div class="lower-men-container">
+
+            <div class="product-box accessories">
+                    <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/309/371/khwbde80/pendant-locket/8/g/k/islam-allah-locket-with-chain-onyx-crystal-cotton-dori-pendant-original-imafxsh7hggz3htd.jpeg?q=50" alt="" class="product-img">
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-name">Men's Accessories</p>
+                        <h3 class="product-rate">245/-</h3>
+                        <div class="cart-wish-btn">
+                            <button class="wish add-btn">Wishlist</button>
+                            <button class="cart add-btn">Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box men-grooming">
+                    <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/612/612/khdqnbk0/hair-styling/a/d/9/hair-wax-100-xxtra-stronghold-wax-for-stylish-hair-made-in-india-original-imafxeyqxb4bff7m.jpeg?q=70" alt="" class="product-img">
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-name">Men's Grooming Product</p>
+                        <h3 class="product-rate">499/-</h3>
+                        <div class="cart-wish-btn">
+                            <button class="wish add-btn">Wishlist</button>
+                            <button class="cart add-btn">Cart</button>
+                        </div>
+                    </div>
+                </div>
+    
+            
+                
+    
+    
+                <div class="product-box top-wear">
+                    <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/309/371/kq9ta4w0/t-shirt/l/a/7/xl-723-2-723-6-723-7-ftx-original-imag4bmyq6ahzgez.jpeg?q=50" alt="" class="product-img">
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-name">Men's Top Wear</p>
+                        <h3 class="product-rate">299/-</h3>
+                        <div class="cart-wish-btn">
+                            <button class="wish add-btn">Wishlist</button>
+                            <button class="cart add-btn">Cart</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="product-box top-wear">
+                    <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/309/371/kfoapow0-0/shirt/1/3/i/s-hlsh009325-highlander-original-imafw2ghqzwrryn2.jpeg?q=50" alt="" class="product-img">
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-name">Men's Top Wear</p>
+                        <h3 class="product-rate">350/-</h3>
+                        <div class="cart-wish-btn">
+                            <button class="wish add-btn">Wishlist</button>
+                            <button class="cart add-btn">Cart</button>
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="product-box personal-care">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/l4ssfww0/trimmer/b/9/j/1-4-mm-professional-zero-gapped-t-blade-trimmer-pro-li-trimmer-original-imagfhjgeczhtsfu.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Personal Care</p>
+                    <h3 class="product-rate">1,790/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/kf4ajrk0-0/shoe/r/p/7/494-8-chevit-blue-original-imafvn9udjcrzd2g.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l4ln8nk0/shoe/c/g/a/6-2cmb-2021-444-gry-40-bruton-blue-grey-original-imagfgsfw5rhsgzn.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l407mvk0/shoe/s/x/h/-original-imagezy42h6kkhjj.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">251/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/kuvkcy80/sandal/h/w/a/8-xxx-01-black-red-8-sfr-black-red-original-imag7wamy9ynjqef.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">130/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/ks99aq80/sandal/w/v/n/6-102-blk-sndl-40-bruton-black-original-imag5v6b3zzbmung.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">220/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l0igvww0/shoe/p/k/r/8-548-chevit-black-grey-original-imagcabfyd4khrfh.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kcnp8y80/slipper-flip-flop/i/x/p/13-372276-puma-black-team-gold-white-original-imaftqjemannbkgt.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">650/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l41n2q80/shoe/c/f/d/-original-imagfywbpbm62u3h.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">789/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/kzrbiq80/slipper-flip-flop/w/o/1/5-blast-1-black-blast-1-grey-evok-black-grey-original-imagbp7yzq25vznq.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/k3lwuq80/shoe/z/v/h/mrj1324-9-aadi-black-original-imafmzfc2hyze9tv.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l2arp8w0/shoe/g/i/g/10-rng-2021-blu-orng-44-bruton-blue-orange-original-imagdzcpzhscxwhg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box foot-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/l05lx8w0/slipper-flip-flop/r/7/f/9-tm-cloud-lite-adda-navy-original-imagcy2sz3umngrv.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Foot Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/ksqeky80/deodorant/j/9/4/215-dark-temptation-gold-temptation-long-lasting-deodorant-original-imag68kwxxwrshce.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/jy0frm80/deodorant/g/f/p/400-hamilton-deodorant-body-spray-denver-men-original-imafgb9fsafampwz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kj0bp8w0-0/deodorant/5/x/i/300-marco-pack-of-2-deodorant-spray-fogg-men-original-imafynzhgbzhb4tx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kqpj4i80/deodorant/h/9/r/495-sporting-club-rider-goal-victor-pack-of-3-3-deodorant-spray-original-imag4nxsa8trkpyy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/km9ht3k0/deodorant/s/w/q/300-code-titanium-combo-2-body-spray-wild-stone-men-original-imagf796wsr5ep7m.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l2arp8w0/perfume/f/x/9/150-club-de-nuit-intense-eau-de-parfum-armaf-men-original-imagdzftyd7cky2s.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l4n2oi80/perfume/p/9/m/-original-imagfhk8kxda2zuz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k2tc1ow0/perfume/h/m/z/120-combo-perfume-for-men-60ml-60ml-eau-de-parfum-envy-men-women-original-imafm2rjfpucs4py.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kuczmvk0/fairness/j/2/i/100-new-improved-activated-charcoal-face-scrub-100-gm-1-beardo-original-imag7hxea7dthbn8.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men-grooming">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l0h1g280/hair-oil/8/p/z/35-beard-growth-oil-35ml-more-beard-growth-with-redensyl-8-original-imagc8ydavg9hzhz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Grooming Product</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kzegk280/t-shirt/r/o/t/s-t285hs-as7whdngr-eyebogler-original-imagbfygwtubscjw.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/klphn680hlty2aw/t-shirt/k/e/c/xs-t322-blwh-eyebogler-original-imagyufkkc6ehgmu.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l1mh7rk0/t-shirt/k/a/i/l-love-t-shirt-moonvelly-original-imagd5ghyhc8ukav.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k4vmxzk0/t-shirt/k/x/m/xl-16-panel-mustard-uzee-original-imafnzyyxzwdcn9m.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kxgfzbk0/t-shirt/h/s/w/xl-t67-nbwh-eyebogler-original-imag9wphz3sg3znk.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kst9gnk0/shirt/r/s/t/xxl-frml-st2-vebnor-original-imag6at4hgjrvyun.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l4u7vrk0/shirt/6/6/r/l-men-slim-fit-solid-mandarin-collar-formal-shirt-mildin-original-imagfn2g5hgszhkk.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kz4gh3k0/shirt/5/c/n/xxl-kcsh-fo-1647-md-fubar-original-imagb79rjjmqbywp.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="../men-img/top-11.webp" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kz4gh3k0/shirt/3/z/z/xxl-kcsh-fo-1647-dusty-pk-fubar-original-imagb79rcb7ghcnw.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box top-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kxnl6kw0/t-shirt/a/2/v/m-sbs-try-this-original-imaga299mymbzqvd.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Top Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kl9rssw0/short/l/k/w/xl-tk014-po2-gry-air-tt-original-imagyfznspzmd2sx.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ku5ufm80/track-pant/e/l/r/xxl-ll-lg-xxl-heradawn-original-imag7cpj7pmdabtv.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">1,899/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k70spzk0/trouser/p/r/b/30-hltr003973-highlander-original-imafpchrehgfapch.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kfoapow0-0/trouser/o/n/8/30-hltr004082-highlander-original-imafw2jufqaz5dck.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kthjy4w0/jean/0/v/d/30-new-jeans-white-luxury-original-imag6th59p2tzvgg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k70spzk0/jean/h/z/s/30-hljn000590-highlander-original-imafpchwdnpgqwpa.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l3hmwsw0/jean/b/q/x/28-d-jen-white-3-masterly-weft-original-imagehqgrtsnds5k.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">1,299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kz065jk0/cargo/y/s/9/4xl-brdwtbl-cargop9-blive-original-imagb43fnuaghtxj.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">1,299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l3lx8cw0/cargo/h/u/c/32-maw21car03e-metronaut-original-imagezzavmmqk9ty.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">1,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kzblocw0/track-pant/w/j/4/s-combo-tr1-vebnor-original-imagbcrupkh6s8yr.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box bottom-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l0zm64w0/three-fourth/v/r/9/s-fc3501-fastcolors-original-imagcnm5sjqrgkhg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Bottom Wear</p>
+                    <h3 class="product-rate">899/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box suits-blazers">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kxtaxzk0/blazer/4/c/i/m-2-0blz-lgry-avaeta-original-imaga6zr6e9z92ss.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Blazzers & Suits</p>
+                    <h3 class="product-rate">2,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box suits-blazers">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kxhvf680/blazer/8/e/l/40-vhbzfslfj54694-van-heusen-original-imag9xrpgcyyj54z.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Blazzers & Suits</p>
+                    <h3 class="product-rate">3,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box suits-blazers">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kpa39u80/blazer/r/k/s/m-velbg-bl-avaeta-original-imag3kyxwwua7ugu.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Blazzers & Suits</p>
+                    <h3 class="product-rate">1,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box suits-blazers">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kr9jafk0/suit/2/u/k/40-pisuonspp22183-peter-england-original-imag53ddywarfzyh.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Blazzers & Suits</p>
+                    <h3 class="product-rate">4,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box suits-blazers">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l3hmwsw0/waistcoat/0/n/h/40-002blaw-look-like-original-imagehcygytpug69.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Blazzers & Suits</p>
+                    <h3 class="product-rate">2,899/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box tie-shocks">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kf5pzm80/cufflink-tie-pin/g/h/e/men-s-cotton-silk-necktie-pocket-square-cufflink-n-multitie-022-original-imafvz3wpkbamjk8.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Tie, Shocks & Caps For Men</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tie-shocks">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l4vnbm80/sock/g/y/i/free-3-7097-0301-blgnm-jockey-original-imagfzcr83qsagux.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Tie, Shocks & Caps For Men</p>
+                    <h3 class="product-rate">385/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tie-shocks">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ky3b0y80/sock/9/k/p/free-4-ws-cross-long-wildstuff-original-imagaenhaahg3tqg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Tie, Shocks & Caps For Men</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tie-shocks">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kf5pzm80/cufflink-tie-pin/m/3/h/men-s-polyester-necktie-set-with-pocket-square-lapel-pin-and-original-imafvzrc38v66kgy.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Tie, Shocks & Caps For Men</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tie-shocks">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jx6fiq80/cap/f/b/4/free-ilu132-ilu-original-imafhpyj8zpzzapn.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Tie, Shocks & Caps For Men</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tie-shocks">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kmds4nk0/cap/2/k/h/free-skull-alyan-original-imagfap98baze6hz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Tie, Shocks & Caps For Men</p>
+                    <h3 class="product-rate">199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kwv0djk0/sweatshirt/7/1/6/m-67018644-puma-original-imag9fzchczwsuhz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kv8fbm80/sweatshirt/k/u/4/xxl-men-s-sweat-shirt-custom-dots-original-imag86nugyrnaagz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">1,799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/krwec280/jacket/v/j/8/xl-mnt-7025-montrez-original-imag5hb9bzhhgzwu.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">2,899/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kh9gbrk0/sweatshirt/9/e/h/m-760y-breil-by-fort-collins-original-imafx8zwnsepkgvc.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">1,199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jpbic280/jacket/j/y/x/m-14733fk-breil-by-fort-collins-original-imafbhhxqnfhvwzm.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">1,399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ke353m80/sweatshirt/a/w/f/m-tblgyhdfulsweat-believer-tripr-original-imafuuu2zsytcyhp.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">1,299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kwtkxow0/muffler/v/c/b/free-wc-nec-broen-original-imag9e8ynmkbh2xn.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/krwec280/jacket/e/c/x/m-mnt-7021-montrez-original-imag5hb96dcwrpmn.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kt0enww0/track-suit/l/8/e/m-84584801-puma-original-imag6g68rrk8ugqb.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kxjav0w0/track-suit/u/4/s/m-m7aw21trs002a-m7-by-metronaut-original-imag9yz6zpg2mr4x.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">2,399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box winter-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kqgyhe80/track-suit/1/h/k/xl-men21-set-hd-wht-srt-wht-blue-maniac-original-imag4h9mzft5auxb.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Winter Wear</p>
+                    <h3 class="product-rate">1,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l3q7jww0/sherwani/p/q/h/xl-808-rudrshri-original-images3hvwcjkjz8.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">1,199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kigbjbk0-0/ethnic-set/w/c/b/42-101-2-vastra-mania-original-imafy8undbfavvzx.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">3,199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l13whow0/ethnic-set/5/v/z/3xl-01-zoster-original-imagcqrgcrjbegr7.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">1,110/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kmf7ki80/dhoti/w/i/j/34-vel-pkt-gold-prakasam-cotton-original-imagfbpxg7jsp2hj.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">1,450/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l30hmkw0/ethnic-set/l/z/h/m-kurta-black-to-black-m-trimurti-bazaar-original-image86zugzavjd3.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">1,299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l1ch4sw0/ethnic-set/v/t/k/xxl-black-slant-slit-k-but-mrnpipe-mrn-saldh-sydney-heights-original-imagcxpgj9zjzuxf.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">1,799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/km2clu80/sherwani/f/x/s/s-ol-golden-145-phone-sg-rajasahab-original-imagffp35djtmmjr.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">2,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/koynr0w0/sherwani/a/t/t/l-jkurta4-pat-rb-avaeta-original-imag3b3bgtuu9hnj.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">1,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/knc2p3k0/dhoti/2/h/y/free-panjakejam-ready-to-weaar-005-prakasam-cotton-original-imag2yxgkrhvsmev.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">550/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box ethnic-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/km3s1ow0/dhoti/g/j/c/free-velcron-pocket-dhpoti-01-pcs-tavasu-original-imagf2vpqhqbtbjv.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Ethnic Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kwtkxow0/brief/n/g/h/xl-maxt-001-elate-trunk-p2-dixcy-scott-maximus-original-imag9eqzjxqua2s6.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jwi518w0/boxer/m/m/9/free-3-boxer-free-size-radha-krishan-exports-original-imaffmbjeg3pfgcd.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">260/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ke353m80/vest/n/f/d/m-k1-pr43517-dixcy-scott-original-imafuukvttxmtvmm.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">150/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/katyzrk0/vest/h/z/n/4xl-tbl-grvest-believer-tripr-original-imafsbgrtsvgb2hh.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">209/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l0zm64w0/vest/y/t/f/m-fc7034-7035-fastcolors-original-imagcngfmugyuusv.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kdnf98w0hlty2aw-0/vest/d/g/2/xl-4-tbljok-gun-gans-gymacvest-tripr-original-imafuzsnzdwtjctt.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kza68i80/pyjama/w/9/q/free-at11at14-brandid-original-imagbcypzvb5d2zz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l3khsi80/pyjama/v/w/4/m-boa21amcwpb5416342-abof-original-imagenw2zmy9tzqx.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box inner-wear">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ky7lci80/pyjama/c/m/l/-original-imagagydjfkgfymz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Inner Wear</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box raincoat">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k02qnww0/raincoat/h/y/b/xxl-transparent-xxl-rain-coat-coats-for-men-jacket-women-kids-original-imafjy2j7p3zmpry.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Raincoat</p>
+                    <h3 class="product-rate">899/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box raincoat">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l2dmky80/raincoat/g/v/9/xl-zt4-black-classicblue-zeel-original-imagdqhekhnvdfef.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Raincoat</p>
+                    <h3 class="product-rate">1,299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box raincoat">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kcuug7k0/raincoat/w/a/c/xxl-indus-xxl-gr-p-the-clownfish-original-imaftvcrkgjgc3hu.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Raincoat</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box raincoat">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kp036vk0/raincoat/0/g/4/xl-opener-1227-xl-bu-p-the-clownfish-original-imag3c249bhkkusp.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Raincoat</p>
+                    <h3 class="product-rate">899/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box raincoat">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kod858w0/raincoat/9/l/s/3xl-prime-black-the-clownfish-original-imag2u7wev5yshhv.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Raincoat</p>
+                    <h3 class="product-rate">1,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <div class="product-box watch">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ksw4ccw0/watch/6/b/c/38024pp25-fastrack-men-original-imag6cu9xkhbgz4y.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Watches</p>
+                    <h3 class="product-rate">3,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box watch">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k0o69ow0/watch/f/g/c/77106sm04-sonata-original-imafkf7uhcfvndcv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Watches</p>
+                    <h3 class="product-rate">2,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box watch">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l02r1jk0/watch/v/y/f/-original-imaf8qx8rmzayqrs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Watches</p>
+                    <h3 class="product-rate">1,899/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box watch">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kn22m4w0/watch/b/z/x/analoug-black-dial-breslet-led-watch-xn-xeezos-original-imagftb3ppkzkbbv.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Watches</p>
+                    <h3 class="product-rate">850/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box watch">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/l0pm3680/watch/z/1/c/2-lxm-008-laxmo-men-original-imagcg3zf7yddgft.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Watches</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box watch">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k4rcmfk0pkrrdj/watch-refurbished/d/e/h/c-nh77043pp02-sonata-original-imafgfzfehhqwjze.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Watches</p>
+                    <h3 class="product-rate">1,559/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box watch">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jwtkk280/watch/h/7/j/ng7078ym03-sonata-original-imafhf8adekrfeft.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Watches</p>
+                    <h3 class="product-rate">1,229/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/l4pxk7k0/wallet-card-wallet/l/z/9/stylish-men-wallet-6-1-11-5-ot-albchn-blk-7-wallet-ilw-8-5-original-imagfkbd8h3ruafr.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">437/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/ksru0sw0/wallet-card-wallet/j/p/i/mah-m-w-t-al-12-12-1-tan-pkt-12-3-card-holder-mahboob-9-original-imag69uetfyudvgz.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">266/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kkmwr680/accessories-combo/g/4/i/sty-born-1o7-loopa-original-imafzxuychsstdaj.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l44hyfk0/backpack/l/h/2/8-661422-tic-tac-tawny-port-12-598432-ftebpktpoww105034-backpack-original-imagf3j95sudetpm.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">579/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kgsb1jk0/backpack/h/q/h/crone-backpack-08-grey-fg8-0-08-208-backpack-american-tourister-original-imafwxzhpsn7cja2.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kydb3ww0/backpack/w/b/2/8-0-spacy-freeride-unisex-bag-with-rain-cover-laptop-office-original-imagam8hfg7gh8f4.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kkr72q80/sunglass/r/t/z/small-medium-lv-new-kingsunglasses-original-imagyffmhtczh5bg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">160/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l0lbrm80/sunglass/d/i/4/-original-imagccgafgq4j3ve.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kuk4u4w0/rucksack/c/a/z/tracking-shoulder-rucksack-bag-rucksack-grey-rucksack-60-l-black-original-imag7nt864dcunjh.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">229/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kyj0vbk0/suitcase/t/1/r/-original-imagaqnvkpwgj3gy.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">450/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kn97te80/suitcase/a/m/p/21-edge-pnf-09-cabin-luggage-provogue-22-original-imagfz7k2vcg8s2n.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">390/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box accessories">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/k51cpe80pkrrdj/ring/r/y/z/adjustable-nm-1680-silver-shine-nm-1680-original-imafm7hbgsbkh9gv.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men's Accessories</p>
+                    <h3 class="product-rate">199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box personal-care">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/300/300/kyrlifk0/trimmer/b/n/4/-original-imagaxgncgcxndjj.jpeg?q=90" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">Men's Personal Care</p>
+                <h3 class="product-rate">2,555/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-box personal-care">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/300/300/kzegk280/trimmer/l/q/j/0-5-12-mm-nht-1039-usb-stainless-steel-cordless-nova-original-imagbf7jwr54j4gg.jpeg?q=90" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">Men's Personal Care</p>
+                <h3 class="product-rate">1,440/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-box personal-care">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/612/612/kwl0akw0/trimmer/f/i/u/0-5-7-mm-3d-rechargeable-100-waterproof-ipx7-electric-shaver-original-imag987nqdvb44hd.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">Men's Personal Care</p>
+                <h3 class="product-rate">1,799/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-box personal-care">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/612/612/kzhbfrk0/trimmer/3/t/j/0-5-21-mm-hair-clippers-trimmer-electric-cordless-cutting-original-imagbhgevtah4tf8.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">Men's Personal Care</p>
+                <h3 class="product-rate">1,299/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+    </section>
+
+    <!---------------------------men-section-end---------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ delivery-section-start  ----------------------------->
+
+    <section id="delivery" class="container-box">
+        <div class="delivery-box">
+            <i class="fa-solid fa-truck delivery-icon"></i>
+            <h4>Free Shipping</h4>
+            <p>Free Shipping for all India order</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-headphones delivery-icon"></i>
+            <h4>Support 24/7</h4>
+            <p>We Support 24 hours a Day</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
+            <h4>100% Money Back</h4>
+            <p>You have 30 days to Return</p>
+        </div>
+    </section>
+
+    <!------------------------ delivery-section-end   ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ footer-section-start  ----------------------------->
+
+    <footer id="footer-section" class="container-box">
+        <div class="footer-box">
+            <a href="#" id="logo-foot">E-<span>Commerce</span></a>
+            <br><br>
+            <p>354, Sector-10, Krishna Nagar, New Delhi</p>
+            <p>9873153589, 0120-765-322</p>
+            <p>Hours : 10:00 - 7:00 Mon-Sat</p>
+            <br>
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <br>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Delivery Information</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-box">
+            <h3>My Account</h3>
+            <br>
+            <p><a href="#" class="sign-in">Sign In</a></p>
+            <p><a href="#">View Cart</a></p>
+            <p><a href="#">My Wishlist</a></p>
+            <p><a href="#">Notification</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+        <div class="footer-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="owner-name">
+            <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/"
+                    target="_blank">Himanshu Sharma</a></p>
+        </div>
+    </footer>
+
+    <!------------------------ footer-section-end ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap-js-link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

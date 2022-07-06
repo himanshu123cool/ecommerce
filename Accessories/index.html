@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../Media/logo.png" type="image/x-icon">
+    <title>Ecommerce Website</title>
+    <!-- custom-css-link  -->
+    <link rel="stylesheet" href="../Accessories/style.css">
+    <!-- custom-js- link -->
+    <script src="../Accessories/script.js" defer></script>
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery-cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!------------------------ header-section-start  ----------------------------->
+    <header id="header" class="container-box">
+        <div class="left-head">
+            <div>
+                <a class="left-head-text" href="tel:+6239208285"><i
+                        class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i
+                        class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i
+                        class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
+            </div>
+        </div>
+        <div class="right-head">
+            <a href="#" id="wishlist"><i class="fa-solid fa-heart wishlist"></i>WishList</a>
+            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i><span>Sign Up</span></a>
+        </div>
+    </header>
+
+
+    <div id="sticky-container">
+        <div id="wrapper" class="container-box">
+            <div class="left-wrapper">
+                <a href="#" id="logo">E-<span>Commerce</span></a>
+            </div>
+            <div class="middle-wrapper">
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="search what you want to see">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <button id="more" class="button"><a href="#">More</a></button>
+                <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
+                <i class="fa-solid fa-bars hamburger-icon"></i>
+                <div class="right-wrapper-container">
+                    <ul class="right-wrapper-menu">
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="close">
+                <i class="fa-solid fa-close close-icon"></i>
+            </div>
+            <div class="user-img-container">
+                <div class="user-img-box">
+                    <img src="../Media/user.png" alt="" class="user-img">
+                </div>
+                <input type="file" id="file">
+                <label class="Upload-photo" for="file">Upload Photo</label>
+                <div class="user-id">
+                    <p>User Name</p>
+                </div>
+            </div>
+            <div class="sidebar-navlist">
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!------------------------ header-section-end  ----------------------------->
+
+
+
+
+        <!------------------------ login-form-section-start ----------------------------->
+
+        <section id="login-section" class="container-box">
+            <i class="fa-solid fa-close login-icon"></i>
+            <div class="login-container">
+                <div class="left-login-box">
+                    <p class="login-heading">Login</p>
+                    <br><br>
+                    <p class="login-text">Get Access to Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-login-box">
+                <div>
+                <div class="form-row-box">
+                    <input type="email" id="email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                </div>
+                <div class="form-row-box">
+                    <input type="password" id="password" placeholder="Enter Your Password" required minlength="8" maxlength="16">
+                    <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                    <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="form-row-box">
+                    <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                   <button class="view-btn" id="login-btn" onclick="loginData()">Login</button>
+                </div>
+                <div class="form-row-box">
+                   <p><a href="#">Forget Password?</a></p> 
+                   <p><a href="#" class="create-acc">New User? Create Account</a></p>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="signup-container">
+                <div class="left-signup-box">
+                    <p class="signup-heading">Sign Up</p>
+                    <br><br>
+                    <p class="signup-text">Sign Up to Access Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-signup-box">
+                    <div>
+                        <div class="form-row-box">
+                            <input type="text" id="sign-name" placeholder="Enter Your Full Name" required minlength="3" maxlength="25" autocomplete="off">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="email" id="sign-email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="password" id="sign-password" placeholder="Enter Your Password" required minlength="8">
+                            <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                            <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-row-box">
+                            <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            <button class="view-btn" id="signup-btn" onclick="saveData()">Sign Up</button>
+                        </div>
+                        <div class="form-row-box">
+                            <p><a href="#" class="existing-acc">Existing Account? login</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="welcome-container">
+                <p class="welcome-text">Sign Up Successfully</p>
+                <h2 class="welcome-heading">Welcome</h2>
+                <p class="welcome-character">Welcome</p>
+                <br>
+                <button class="view-btn" id="start-btn">Let Start</button>
+            </div>
+        </section>
+
+
+
+        <!------------------------ login-form-section-end ----------------------------->
+
+
+
+
+
+
+
+
+    <!---------------------------men-section-start-------------------------->
+
+    <section id="men-section" class="container-box">
+        <div class="upper-men-container">
+            <div class="btns-box">
+                <div class="product-filter-btn active" data-filter="ALL">ALL</div>
+                <div class="product-filter-btn" data-filter="men">Men</div>
+                <div class="product-filter-btn" data-filter="Women">Women</div>
+                <div class="product-filter-btn" data-filter="Kid">Kid</div>
+            </div>
+        </div>
+        <div class="lower-men-container">
+
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky0g58w0/hand-messenger-bag/n/o/9/women-sling-bag-pink-e-a-hd-bag-vintage-pink-hand-held-bag-original-imagacbzy9cmwv6n.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/krtjgcw0/hand-messenger-bag/m/w/9/szl9-szl9-hand-held-bag-shezelle-original-imag5ja8pzqqghtv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/k6fd47k0pkrrdj/wallet-card-wallet/t/u/c/sam-17-brw-pln-alb-samtroh-original-imafgf56fvf6aybb.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/k5bcscw0pkrrdj/wallet-card-wallet/a/p/p/sld04-samtroh-tan-slide-original-imafc2y9hyk7gt4x.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/k6fd47k0pkrrdj/wallet-card-wallet/w/d/r/sam-10-blk-pln-alb-samtroh-original-imaffzxwdxry3awg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">251/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/kq8dua80/wallet-card-wallet/u/n/k/men-black-genuine-leather-wallet-gift-set-combo-giftbox190-original-imag4abtj8vhkq6q.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">130/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/660/792/kq8dua80/wallet-card-wallet/r/1/z/gift-set-for-all-occasion4-gift4-wallet-wildhorn-original-imag4abternrmqsa.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">220/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kkbh8cw0/remote-control-toy/h/o/n/waterproof-remote-controlled-rock-crawler-rc-monster-car-with-original-imafzzw3d6hcy4qp.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kc0u7bk0/vehicle-pull-along/r/z/6/parthishy-taders-robot-car-automatic-deformation-2-in-1-original-imaft8zahakernhh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kkr72q80/sunglass/r/t/z/small-medium-lv-new-kingsunglasses-original-imagyffmhtczh5bg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kelptow0-0/sunglass/5/p/v/gn3006-yel-gn3006-red-m-gansta-original-imafv93bhmbhrghg.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">650/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kykgb680/bangle-bracelet-armlet/k/u/p/free-free-na-jewel-60-62-alogo-original-imagaryhaugthknw.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">789/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jh6l2fk0/hand-messenger-bag/z/z/m/af-30-af-30-shoulder-bag-ankita-fashion-world-original-imaf57hyuhkyx7y9.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/krme93k0/hand-messenger-bag/5/q/f/upr-cut-mrn-3-upr-cut-mrn-pc3-shoulder-bag-like-style-original-imag5czeeztxfajt.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kydb3ww0/backpack/w/b/2/8-0-spacy-freeride-unisex-bag-with-rain-cover-laptop-office-original-imagam8hfg7gh8f4.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kbb49zk0/backpack/j/w/u/2214-black-grey-stylish-tuff-quality-college-school-casual-bag-original-imafszsu52gn9rc9.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kph8h3k0/suitcase/e/z/s/foxtrot-foxtr68mlv-check-in-luggage-vip-original-imag3pef959vrvsk.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box men">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l01blow0/duffel-bag/q/o/j/20-60l-derben-turquoise-polyester-lightweigh-cabin-size-luggage-original-imagbx23hfywe34c.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Men Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l3os4280/pouch-potli/h/m/d/potli-matka-02-potli-matka-02-potli-lookingfab-228-6-original-imageqgjffymbtgn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/jx6fiq80/clutch/z/g/f/double-ball-gold-double-ball-clutch-tooba-handicraft-original-imafhz7vam3umeep.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kvtuxe80/clutch/y/m/r/quickrahma-wallet-clutch-101-p-qr878g-stylish-women-casual-hand-original-imag8n89yvwuv9rj.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/kzvlua80/hand-messenger-bag/c/k/8/-original-imagbscdp4bhhyqx.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l0bbonk0/tiara-crown/f/i/p/1-golden-king-crown-crown-royals-original-imagc4g7ehmfshzq.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/l31x2fk0/frame/d/9/b/52-na-tr1003-c5-yourspex-original-image9b6kzkbgywz.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ksuowi80/frame/h/v/b/58-na-ag98020pk-peter-jones-original-imag6bw7eehnuzyb.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box Women">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/309/371/ksw4ccw0/frame/a/b/o/54-na-ag5197t-peter-jones-original-imag6d6d2ghhaqfb.jpeg?q=50" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Women Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        
+            
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l4zxn680/nail-clipper-cutter/w/u/r/automatic-nail-trimmer-women-electric-baby-nail-trimmer-nail-original-imagfrpxjty9gagz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kah413k0/nail-clipper-cutter/h/a/k/baby-manicure-kit-uneeber-5-in-1-baby-nail-care-set-safe-baby-original-imafsyvgmawrggdy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k6ci8i80/diaper/b/k/x/size-adjustable-reusable-diaper-with-diaper-liner-st-331-7-m-1-original-imafh7b5ttwghdes.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k6jnfrk0/talc/e/z/n/100-baby-powder-himalaya-original-imafzzecvegwgha5.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/jve4pe80/shampoo/f/e/3/200-baby-no-more-tears-shampoo-200-ml-johnson-s-original-imaf6uf3kbdtffhq.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l1zc6fk0/feeding-utensil/w/g/9/first-feed-grand-box-ffgbxb2-bowl-r-for-rabbit-original-imagdfbrxegysczh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kyoqmq80/sipper-cup/f/s/u/240-mobby-little-spout-sipper-bpa-free-240-ml-6m-1-18815-luvlap-original-imagav7cb5yyzjkh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kyoqmq80/sipper-cup/j/l/w/300-tiny-giffy-sippy-cup-silicone-straw-bpa-free-300-ml-18m-1-original-imagav82fuff8quu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/klgx0280/board-game/o/n/d/2-in-1-board-games-ludo-snake-and-ladders-gift-collection-original-imagyhy6b9mhbnnr.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box Kid">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k7z3afk0/board-game/d/z/p/premium-quality-2-in-1-business-chess-junior-deluxe-board-game-original-imafq3eukabnjzfy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Kids Accessories</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!---------------------------men-section-end---------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ delivery-section-start  ----------------------------->
+
+    <section id="delivery" class="container-box">
+        <div class="delivery-box">
+            <i class="fa-solid fa-truck delivery-icon"></i>
+            <h4>Free Shipping</h4>
+            <p>Free Shipping for all India order</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-headphones delivery-icon"></i>
+            <h4>Support 24/7</h4>
+            <p>We Support 24 hours a Day</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
+            <h4>100% Money Back</h4>
+            <p>You have 30 days to Return</p>
+        </div>
+    </section>
+
+    <!------------------------ delivery-section-end   ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ footer-section-start  ----------------------------->
+
+    <footer id="footer-section" class="container-box">
+        <div class="footer-box">
+            <a href="#" id="logo-foot">E-<span>Commerce</span></a>
+            <br><br>
+            <p>354, Sector-10, Krishna Nagar, New Delhi</p>
+            <p>9873153589, 0120-765-322</p>
+            <p>Hours : 10:00 - 7:00 Mon-Sat</p>
+            <br>
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <br>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Delivery Information</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-box">
+            <h3>My Account</h3>
+            <br>
+            <p><a href="#" class="sign-in">Sign In</a></p>
+            <p><a href="#">View Cart</a></p>
+            <p><a href="#">My Wishlist</a></p>
+            <p><a href="#">Notification</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+        <div class="footer-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="owner-name">
+            <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/"
+                    target="_blank">Himanshu Sharma</a></p>
+        </div>
+    </footer>
+
+    <!------------------------ footer-section-end ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap-js-link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

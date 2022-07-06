@@ -11,14 +11,6 @@ $(window).scroll(function () {
 
 
 
-// newArr-wishlist-script 
-$('.newArr-wishlist').click(function () {
-    $(this).toggleClass('active')
-})
-
-
-
-
 
 
 //sidebar-script 
@@ -223,3 +215,31 @@ $('.password-hide-btn').click(function(){
 
 
 
+
+
+// filter-section-script 
+$('.product-filter-btn').click(function(){
+    const value = $(this).attr('data-filter');
+    if(value=='ALL'){
+        $('.product-box').show('500');
+    }
+    else{
+        $('.product-box').not('.' + value).hide('500');
+        $('.product-box').filter('.' + value).show('500');
+    }
+})
+
+
+
+
+// filter-btn-sctipt 
+
+$(".product-filter-btn").click(function () {
+    if ($(this).hasClass("active")) {
+      $(".product-filter-btn").removeClass("active");
+    }
+    else {
+      $(".product-filter-btn").removeClass("active");
+      $(this).addClass("active");
+    }
+  });

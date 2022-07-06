@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../Media/logo.png" type="image/x-icon">
+    <title>Ecommerce Website</title>
+    <!-- custom-css-link  -->
+    <link rel="stylesheet" href="../Electronic/style.css">
+    <!-- custom-js- link -->
+    <script src="../Electronic/script.js" defer></script>
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery-cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!------------------------ header-section-start  ----------------------------->
+    <header id="header" class="container-box">
+        <div class="left-head">
+            <div>
+                <a class="left-head-text" href="tel:+6239208285"><i
+                        class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i
+                        class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i
+                        class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
+            </div>
+        </div>
+        <div class="right-head">
+            <a href="#" id="wishlist"><i class="fa-solid fa-heart wishlist"></i>WishList</a>
+            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i><span>Sign Up</span></a>
+        </div>
+    </header>
+
+
+    <div id="sticky-container">
+        <div id="wrapper" class="container-box">
+            <div class="left-wrapper">
+                <a href="#" id="logo">E-<span>Commerce</span></a>
+            </div>
+            <div class="middle-wrapper">
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="search what you want to see">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <button id="more" class="button"><a href="#">More</a></button>
+                <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
+                <i class="fa-solid fa-bars hamburger-icon"></i>
+                <div class="right-wrapper-container">
+                    <ul class="right-wrapper-menu">
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="close">
+                <i class="fa-solid fa-close close-icon"></i>
+            </div>
+            <div class="user-img-container">
+                <div class="user-img-box">
+                    <img src="../Media/user.png" alt="" class="user-img">
+                </div>
+                <input type="file" id="file">
+                <label class="Upload-photo" for="file">Upload Photo</label>
+                <div class="user-id">
+                    <p>User Name</p>
+                </div>
+            </div>
+            <div class="sidebar-navlist">
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!------------------------ header-section-end  ----------------------------->
+
+
+
+
+        <!------------------------ login-form-section-start ----------------------------->
+
+        <section id="login-section" class="container-box">
+            <i class="fa-solid fa-close login-icon"></i>
+            <div class="login-container">
+                <div class="left-login-box">
+                    <p class="login-heading">Login</p>
+                    <br><br>
+                    <p class="login-text">Get Access to Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-login-box">
+                <div>
+                <div class="form-row-box">
+                    <input type="email" id="email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                </div>
+                <div class="form-row-box">
+                    <input type="password" id="password" placeholder="Enter Your Password" required minlength="8" maxlength="16">
+                    <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                    <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="form-row-box">
+                    <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                   <button class="view-btn" id="login-btn" onclick="loginData()">Login</button>
+                </div>
+                <div class="form-row-box">
+                   <p><a href="#">Forget Password?</a></p> 
+                   <p><a href="#" class="create-acc">New User? Create Account</a></p>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="signup-container">
+                <div class="left-signup-box">
+                    <p class="signup-heading">Sign Up</p>
+                    <br><br>
+                    <p class="signup-text">Sign Up to Access Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-signup-box">
+                    <div>
+                        <div class="form-row-box">
+                            <input type="text" id="sign-name" placeholder="Enter Your Full Name" required minlength="3" maxlength="25" autocomplete="off">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="email" id="sign-email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="password" id="sign-password" placeholder="Enter Your Password" required minlength="8">
+                            <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                            <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-row-box">
+                            <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            <button class="view-btn" id="signup-btn" onclick="saveData()">Sign Up</button>
+                        </div>
+                        <div class="form-row-box">
+                            <p><a href="#" class="existing-acc">Existing Account? login</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="welcome-container">
+                <p class="welcome-text">Sign Up Successfully</p>
+                <h2 class="welcome-heading">Welcome</h2>
+                <p class="welcome-character">Welcome</p>
+                <br>
+                <button class="view-btn" id="start-btn">Let Start</button>
+            </div>
+        </section>
+
+
+        
+        <!------------------------ login-form-section-end ----------------------------->
+
+
+        
+        
+        
+        
+        
+        
+        <!---------------------------men-section-start-------------------------->
+        
+        <section id="men-section" class="container-box">
+            <div class="upper-men-container">
+                <div class="btns-box">
+                    <div class="product-filter-btn active" data-filter="ALL">ALL</div>
+                    <div class="product-filter-btn" data-filter="mobile">Mobile</div>
+                    <div class="product-filter-btn" data-filter="mobile-acc">Mobile Accessories</div>
+                <div class="product-filter-btn" data-filter="smart-tech">Smart Wearable Tech</div>
+                <div class="product-filter-btn" data-filter="laptop">Laptop</div>
+                <div class="product-filter-btn" data-filter="computer-peripherial">Computer Peripherals</div>
+                <div class="product-filter-btn" data-filter="tablet">Tablet</div>
+                <div class="product-filter-btn" data-filter="speaker">Speakers</div>
+                <div class="product-filter-btn" data-filter="camera">Camera</div>
+                <div class="product-filter-btn" data-filter="Home-appliances">Home Appliances</div>
+                <div class="product-filter-btn" data-filter="telivision">Telivision</div>
+                <div class="product-filter-btn" data-filter="washing-machine">Washing Machine</div>
+                <div class="product-filter-btn" data-filter="air-condition">Air Conditioner</div>
+                <div class="product-filter-btn" data-filter="refrigerator">Refrigerator</div>
+            </div>
+        </div>
+        <div class="lower-men-container">
+            
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktaeqvk0/gimbal/k/7/o/200-black-pzz42-buy-hot-selling-tripod-stand-with-clip-bag-original-imag6z3kywtggduf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">44,299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kr0ynbk0/role-play-toy/s/s/q/kids-digital-camera-web-camera-for-computer-child-video-recorder-original-imag4wvwkt3hzttu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">12,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                    <img src="https://rukminim1.flixcart.com/image/312/312/ku5ufm80/mobile/s/i/q/sport-9a-redmi-original-imag7chxqqu7h5hs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/ky65wnk0/cases-covers/back-cover/f/c/i/honor-7c-blue-vint-bozti-original-imagagtnyb2chcjf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/keq058w0/cases-covers/back-cover/j/v/y/bozti-mi-9a-blk-vinty-original-imafvcjgxqwa53c2.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2f20sw0/mobile/y/x/f/10a-b09xb8gm9r-redmi-original-imagdrghswubhh2p.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">New Mobile</p>
+                <h3 class="product-rate">9499/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-box refrigerator">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/312/312/ky90scw0/refrigerator-new/g/q/s/-original-imagaj234t6qqayh.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">New Refrigerator</p>
+                <h3 class="product-rate">22,999/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-box refrigerator">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kyxb9u80/refrigerator-new/b/j/z/rs-eonvelvet-579-rfd-gl-bk-178-6-na-2021-94-godrej-64-3-91-original-imagbfnarqn4vvne.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">New Refrigerator</p>
+                <h3 class="product-rate">28,999/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-box refrigerator">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/312/312/kz5vwy80/refrigerator-new/b/z/c/ctc29bt3ni-1680-3-2021-65-5-bosch-660-605-original-imagb8zhgczykhqa.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">New Refrigerator</p>
+                <h3 class="product-rate">12,999/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l1mh7rk0/mobile/f/z/p/note-11-pro-5g-2201116si-redmi-original-imagd5gcaqg9cvme.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0jwbrk0/mobile/a/p/r/-original-imagcb64gwkhzdk5.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9130/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktx9si80/mobile/q/a/c/narzo-50a-rmx3430-realme-original-imag75kybaer8scz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9220/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqjtd3k0/mobile/s/b/8/c11-2021-rmx3231-realme-original-imag4j4xkqchhfxk.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky90scw0/mobile/m/r/u/-original-imagagnffruu7ptd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9650/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4vnbm80/mobile/9/g/l/m53-5g-sm-m536bzneinu-samsung-original-imagfzjgxyrv9zwz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9789/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kx9as280/mobile/w/d/m/guru-1200-gt-e1215zkains-samsung-original-imag9rbacapgffzg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4n2oi80/mobile/r/6/t/-original-imagfhu6dcpdnqkh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/l0sgyvk0/mobile/k/x/c/-original-imagcg22czc3ggvw.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2p23rk0/mobile/v/w/i/-original-imagdznhbgw63xhv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mobile</p>
+                    <h3 class="product-rate">9499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/keq058w0/cases-covers/back-cover/9/n/e/bozti-mi-9a-bwn-vinty-original-imafvcjgryp5juzr.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l3vxbbk0/cases-covers/back-cover/f/a/k/flip-cover-for-infinix-hot-12-play-blue-webkreature-original-imagevzq2nry96nw.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ksdjma80/headphone/o/f/c/airdopes-131-airdopes-138-boat-original-imag5yz96jehyqrg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kt8zb0w0/headphone/j/c/p/teddf30-bk-mivi-original-imag6n4qkwuhmgrg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kj0bp8w0-0/headphone/l/j/0/bassheads-103-black-boat-original-imafyz3wqtqfzzwd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ksw4ccw0/headphone/w/g/r/rockerz-450-boat-original-imag6cqqh49wjfy5.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k5vcya80pkrrdj/power-bank/2/e/z/high-speed-30k-new-p3-miara-original-imafgqzsfuzcdbpd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kfcv6vk0/power-bank/q/z/q/power-bank-10000-plm13zm-mi-original-imafvtreeefx5thb.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">250/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box mobile-acc">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l4ssfww0/power-bank/0/2/r/x-66-10000-mah-x-66-callmate-original-imagfm7wfvruwnkt.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mobile Accessories</p>
+                    <h3 class="product-rate">499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        
+            
+
+
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jmi22kw0/smartwatch/t/g/y/mtf02hn-a-apple-original-imaf9ec8nh6sscfh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/js0o9zk0/smartwatch/e/h/4/a1612-amazfit-original-imafdzrsybgfzwbp.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2350/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k37mg7k0/smart-glass/d/y/4/bluetooth-audio-player-bluetooth-connectivity-sunglasses-ewell-original-imafmebbuyhppmfb.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jmi22kw0/smartwatch/y/d/j/mtf32hn-a-apple-original-imaf9ec8ssmfcuxf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/kmthz0w0/screen-expander-phone/x/m/v/5-6-times-3d-001-scrn-enl-lionbolt-original-imagfmyyh6zhtmzb.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2399/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4oi4cw0/smartwatch/o/w/7/40-smart-band-fitness-band-35-mm-color-touch-screen-for-android-original-imagfgpzhxhcc3wk.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4ln8nk0/smartwatch/o/w/c/22-m3-android-marfa-no-original-imagfgufzghryfe4.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2300/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0r1j0w0/smart-band-tag/z/b/5/na-no-free-size-12-yes-yes-116-smart-watch-for-mens-with-camera-original-imagcgxwskwjt9hu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2699/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box smart-tech">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kuof5ow0/smart-band-tag/6/x/9/led-no-free-size-120-no-no-ml-30-proprietary-os-mercy-no-original-imag7qr8k88shneh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Modern Smart-Wearble</p>
+                    <h3 class="product-rate">2120/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/keaaavk0/computer/c/q/t/lenovo-na-thin-and-light-laptop-original-imafuzt873zgp9xe.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">40499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kruyw7k0/computer/f/i/u/na-thin-and-light-laptop-lenovo-original-imag5jy6fsm2yx4q.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">21499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l44hyfk0/computer/o/d/w/-original-imagf35eyyeezqpk.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">32928/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l13whow0/computer/o/s/h/-original-imagcqvpmys2cmg3.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">40499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l1dwknk0/computer/e/u/0/inspiron-3525-notebook-dell-original-imagcyrebyny33kd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">40499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kp2y2kw0/computer/y/0/c/na-thin-and-light-laptop-asus-original-imag3ebnzawky4kn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">40499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kp1imq80/computer/u/b/z/na-gaming-laptop-acer-original-imag3d63hk3h8nm2.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">22499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4oi4cw0/computer/i/n/e/a715-5g-gaming-laptop-acer-original-imagfj2g954wfdyz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">42499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kp2y2kw0/computer/3/q/k/lenovo-original-imag3eht25nykhjn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">40499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box laptop">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kr3tj0w0/computer/t/q/m/na-chromebook-hp-original-imag4yuphzuyfyc4.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Mew Laptop</p>
+                    <h3 class="product-rate">50499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="product-box computer-peripherial">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l3j2cnk0/printer/z/g/t/m3170-epson-original-imagemsdbuxz7bfs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Computer-Peripherial</p>
+                    <h3 class="product-rate">21,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box computer-peripherial">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ks7tuvk0/printer/p/i/k/pixma-g670-canon-original-imag5tweskrjhmpe.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Computer-Peripherial</p>
+                    <h3 class="product-rate">11,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box computer-peripherial">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/printer/k/r/f/canon-mg2470-original-imadqasfqaktjbz5.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Computer-Peripherial</p>
+                    <h3 class="product-rate">23,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box computer-peripherial">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kb5eikw0/monitor/m/v/b/vg248qe-vg248qe-asus-original-imafsjzaayyqwd4p.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Computer-Peripherial</p>
+                    <h3 class="product-rate">10,669/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box computer-peripherial">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jucz98w0/monitor/q/b/7/asus-xg248q-90lm03z0-b01a20-asus-original-imaffgapxcdjjrgc.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Computer-Peripherial</p>
+                    <h3 class="product-rate">19,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- tablet -->
+
+            <div class="product-box tablet">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktop5e80/tablet/6/o/s/mk2p3hn-a-apple-original-imag6yy8deumbvxz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Tablets</p>
+                    <h3 class="product-rate">28,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tablet">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktop5e80/tablet/y/j/o/mk893hn-a-apple-original-imag6yg2hgqafged.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Tablets</p>
+                    <h3 class="product-rate">18,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tablet">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kod858w0/tablet/i/e/x/mhqr3hn-a-apple-original-imag2ujneawpdgzs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Tablets</p>
+                    <h3 class="product-rate">30,199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tablet">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0jwbrk0/tablet/h/l/f/-original-imagcbjgzhfak2jd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Tablets</p>
+                    <h3 class="product-rate">17,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box tablet">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kolsscw0/tablet/n/r/c/mhwd3hn-a-apple-original-imag3yr5xrqchvrg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Tablets</p>
+                    <h3 class="product-rate">15,299/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k5e7o280/speaker/soundbar/y/m/r/philips-tapb603-98-original-imafz2zyknuqtzfj.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">4,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k6fd47k0pkrrdj/speaker-refurbished/g/b/h/a-aavante-bar-1550-boat-original-imafk9gd9vmcgzxr.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">3,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kplisnk0/speaker/mobile-tablet-speaker/8/k/e/bs5pl-bk-mivi-original-imag3sgmv9hzrncf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">2,799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kiqbma80-0/speaker/mobile-tablet-speaker/u/s/g/bs5rm2-bk-mivi-original-imafyg8xbv9rfsnn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">8,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kv1a4cw0/speaker/mobile-tablet-speaker/o/x/g/stone-grenade-stone-grenade-rtl-boat-original-imag8yxagkku8mbz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">1,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kingqkw0-0/speaker/mobile-tablet-speaker/s/8/i/stone-350-boat-original-imafyebfuaumdezs.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">1,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ku2zjww0/speaker/laptop-desktop-speaker/9/x/n/wireless-led-light-bulb-speaker-rgb-smart-music-bulb-e27-base-original-imag7acwzzzgvhgf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">2,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k2f1n680/speaker/home-theatre/g/v/t/boat-partypal-60-original-imafhdeudg3kfpjg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">5,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k0bbb0w0pkrrdj/speaker-refurbished/h/a/f/a-space-car-zebronics-original-imafgyhruuty2huv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">4,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2jcccw0/speaker/t/m/k/-original-imagdv2zjmshecrg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">9,199/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box speaker">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kex5ci80/smart-assistant/t/g/u/nest-mini-with-smitch-smart-home-set-up-kit-ga00781-in-sb161001-original-imafvh4dqvx8zgqv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Branded Speakers</p>
+                    <h3 class="product-rate">4,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jfbfde80/camera/n/r/n/canon-eos-eos-3000d-dslr-original-imaf3t5h9yuyc5zu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">51,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k1jlyfk0/dslr-camera/b/c/a/90d-eos-90d-canon-original-imafh3b6jvmzyesh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">31,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k9oj8280/dslr-camera/m/q/v/d780-d780-nikon-original-imafrexfczyughbe.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">44,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k4x2du80/camera/5/d/r/d-design-kids-children-s-digital-video-camera-children-s-digital-original-imafnp5yjcyysdst.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">16,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kr0ynbk0/role-play-toy/c/d/d/kids-digital-camera-web-camera-for-computer-child-video-recorder-original-imag4wvwqduaakhz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">23,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kvpklu80/sports-action-camera/u/s/g/97-real-4k-16mp-wifi-hdr-video-sports-and-action-camera-2-2-16-original-imag8jwvwfvps4gg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">66,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l08gsy80/sports-action-camera/x/d/a/mini-spy-camera-hidden-camera-wireless-wifi-camera-1080p-hd-mini-original-imagc2mrsgbjgceu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">60,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box camera">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kvzkosw0/sports-action-camera/w/n/o/cn10-proffessional-4k-60fps-hd-action-camera-for-vlogging-with-original-imag8rhwevubhas2.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Digital Camera</p>
+                    <h3 class="product-rate">19,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqo3onk0/sewing-machine/x/e/q/allure-usha-original-imag4mj5z46x4gd5.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">1,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqo3onk0/sewing-machine/k/p/t/stitch-magic-usha-original-imag4mj52prx4z7h.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">2,599/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/ky4qgsw0/water-purifier/5/p/b/-original-imagafgg5hcn6rtr.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">9,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kthjy4w0/water-purifier/e/u/s/ace-plus-kent-original-imag6tz43kut2rvh.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">8,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kmax8y80/voltage-stabilizer/g/l/f/eps-30-g-everest-original-imagf8gthwhrf9py.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">5,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/ky90scw0/iron/8/g/o/electric-zunvolt-original-imagaj2m3ystzgwn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">1,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k66sh3k0/iron/y/v/k/havells-1000-watt-dry-iron-original-imafeqzfcjghdzqh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">799/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l3uhvgw0/fan/p/n/6/-original-imagevmhggjv3th9.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">2,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/612/612/knt7zbk0/air-cooler/d/o/b/magicool-dx-cw5002b-orient-electric-original-imag2ejukzpa9xg3.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">6,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box Home-appliances">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kl6wx3k0/vacuum-cleaner/s/t/u/ksl-160-kent-original-imagyda3uhvkhdqc.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">Small Home-Appliances</p>
+                    <h3 class="product-rate">8,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box telivision">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l12h1u80/television/z/c/1/-original-imagcppgc2ycvxdb.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Smart Telivision</p>
+                    <h3 class="product-rate">18,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box telivision">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqse07k0/television/y/0/g/65up7500ptz-65up7500ptz-lg-original-imag4q3zbmruhsfg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Smart Telivision</p>
+                    <h3 class="product-rate">29,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box telivision">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l1tmf0w0/television/k/q/h/-original-imagdbysykjsyfgd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Smart Telivision</p>
+                    <h3 class="product-rate">25,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box telivision">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ksoz53k0/television/c/p/h/l43m6-es-mi-original-imag6774wykv4ps8.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Smart Telivision</p>
+                    <h3 class="product-rate">45,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box telivision">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l3nco7k0/television/j/1/c/-original-imageq5ez9dztcsp.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Smart Telivision</p>
+                    <h3 class="product-rate">35,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="product-box washing-machine">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kosxzm80/washing-machine-new/b/p/0/7-ma200w70-g-in-midea-original-imag36jgakjptkrz.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Washing-Machine</p>
+                    <h3 class="product-rate">9,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box washing-machine">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kf8kvbk0/washing-machine-new/3/u/u/xqg80-f814ve-galanz-original-imafvqqgazxgjdpz.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Washing-Machine</p>
+                    <h3 class="product-rate">19,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box washing-machine">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/300/300/kerfl3k0/washing-machine-new/c/p/c/t70spsf2z-lg-original-imafvcnufwyxzcpv.jpeg?q=90" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Washing-Machine</p>
+                    <h3 class="product-rate">15,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box washing-machine">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l1qrjbk0/washing-machine-new/v/2/1/8-461-s80sbxr-5-460-782-22-5-onida-1001-original-imagd8k4swngjub8.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Washing-Machine</p>
+                    <h3 class="product-rate">7,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box washing-machine">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kzn17680/washing-machine-new/v/v/i/7-43-5-maestroclean-7000-5-350-43-5-16-5-singer-90-5-original-imagbhwvpkxpudny.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Washing-Machine</p>
+                    <h3 class="product-rate">8,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box washing-machine">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kx3l0nk0/washing-machine-new/a/q/p/-original-imag9mubycz9yjjx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Wild-Stone Perfume</p>
+                    <h3 class="product-rate">10,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box washing-machine">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktlu9ow0/washing-machine-new/d/z/r/tl-rss-6-5-kg-aqua-ifb-original-imag6x2ym5zpvcga.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Wild-Stone Perfume</p>
+                    <h3 class="product-rate">7,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <div class="product-box air-condition">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ku4ezrk0/air-conditioner-new/1/r/x/ir125icy1-split-onida-inverter-original-imag7b6zkbqsjr4h.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Air-Conditioner</p>
+                    <h3 class="product-rate">32,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box air-condition">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kltryq80/air-conditioner-new/l/l/y/cs-ru18xkytw-cu-ru18xkytw-split-panasonic-inverter-original-imagyugnrnv2djmk.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Air-Conditioner</p>
+                    <h3 class="product-rate">22,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box air-condition">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jy3anbk0/air-conditioner-new/z/b/y/183-dza-r32-1-5-window-fixed-speed-voltas-original-imafgbz9hpnkwhs4.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Air-Conditioner</p>
+                    <h3 class="product-rate">35,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box air-condition">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l29c9e80/air-conditioner-new/r/c/p/-original-imagdmzfvqathheq.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Air-Conditioner</p>
+                    <h3 class="product-rate">27,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box air-condition">
+            <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jua4djk0/air-conditioner-new/f/r/q/jw-q18wuza-1-5-window-lg-fixed-speed-original-imaffg2mbghyfcgb.jpeg?q=70" alt="" class="product-img">
+            </div>
+                <div class="product-detail">
+                    <p class="product-name">New Air-Conditioner</p>
+                    <h3 class="product-rate">25,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box air-condition">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l29c9e80/air-conditioner-new/r/c/p/-original-imagdmzfvqathheq.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Air-Conditioner</p>
+                    <h3 class="product-rate">44,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="product-box refrigerator">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/312/312/l2ghgnk0/refrigerator-new/u/i/p/gl-d199ospc-1247-2-2022-34-lg-638-537-original-imagdssqtwtptsxf.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">New Refrigerator</p>
+                <h3 class="product-rate">25,999/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-box refrigerator">
+            <div class="product-img-box">
+            <img src="https://rukminim1.flixcart.com/image/312/312/k5r2mq80/refrigerator-new/s/b/m/if-inv-cnv-305-argyle-black-3s-n-3-whirlpool-original-imafny245fuqksar.jpeg?q=70" alt="" class="product-img">
+            </div>
+            <div class="product-detail">
+                <p class="product-name">New Refrigerator</p>
+                <h3 class="product-rate">15,999/-</h3>
+                <div class="cart-wish-btn">
+                    <button class="wish add-btn">Wishlist</button>
+                    <button class="cart add-btn">Cart</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+    </section>
+
+    <!---------------------------men-section-end---------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ delivery-section-start  ----------------------------->
+
+    <section id="delivery" class="container-box">
+        <div class="delivery-box">
+            <i class="fa-solid fa-truck delivery-icon"></i>
+            <h4>Free Shipping</h4>
+            <p>Free Shipping for all India order</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-headphones delivery-icon"></i>
+            <h4>Support 24/7</h4>
+            <p>We Support 24 hours a Day</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
+            <h4>100% Money Back</h4>
+            <p>You have 30 days to Return</p>
+        </div>
+    </section>
+
+    <!------------------------ delivery-section-end   ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ footer-section-start  ----------------------------->
+
+    <footer id="footer-section" class="container-box">
+        <div class="footer-box">
+            <a href="#" id="logo-foot">E-<span>Commerce</span></a>
+            <br><br>
+            <p>354, Sector-10, Krishna Nagar, New Delhi</p>
+            <p>9873153589, 0120-765-322</p>
+            <p>Hours : 10:00 - 7:00 Mon-Sat</p>
+            <br>
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <br>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Delivery Information</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-box">
+            <h3>My Account</h3>
+            <br>
+            <p><a href="#" class="sign-in">Sign In</a></p>
+            <p><a href="#">View Cart</a></p>
+            <p><a href="#">My Wishlist</a></p>
+            <p><a href="#">Notification</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+        <div class="footer-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="owner-name">
+            <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/"
+                    target="_blank">Himanshu Sharma</a></p>
+        </div>
+    </footer>
+
+    <!------------------------ footer-section-end ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap-js-link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

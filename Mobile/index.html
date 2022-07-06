@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../Media/logo.png" type="image/x-icon">
+    <title>Ecommerce Website</title>
+    <!-- custom-css-link  -->
+    <link rel="stylesheet" href="../Mobile/style.css">
+    <!-- custom-js- link -->
+    <script src="../Mobile/script.js" defer></script>
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jquery-cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- bootstrap-link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!------------------------ header-section-start  ----------------------------->
+    <header id="header" class="container-box">
+        <div class="left-head">
+            <div>
+                <a class="left-head-text" href="tel:+6239208285"><i
+                        class="fa-solid fa-phone left-head-icon"></i>6239208285</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="mailto:himanshu312cool@gmail.com"> <i
+                        class="fa-solid fa-envelope left-head-icon"></i>E-commerce123offical@gmail.com</a>
+            </div>
+            <div>
+                <a class="left-head-text" href="https://goo.gl/maps/XHEKkaT5xEKbGwf16"><i
+                        class="fa-solid fa-location-dot left-head-icon"></i>Krishna Nagar,New Delhi</a>
+            </div>
+        </div>
+        <div class="right-head">
+            <a href="#" id="wishlist"><i class="fa-solid fa-heart wishlist"></i>WishList</a>
+            <a href="#" id="account"><i class="fa-solid fa-user user-icon"></i><span>Sign Up</span></a>
+        </div>
+    </header>
+
+
+    <div id="sticky-container">
+        <div id="wrapper" class="container-box">
+            <div class="left-wrapper">
+                <a href="#" id="logo">E-<span>Commerce</span></a>
+            </div>
+            <div class="middle-wrapper">
+                <div class="search-box">
+                    <input type="text" name="search" id="search" placeholder="search what you want to see">
+                    <label for="search">
+                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right-wrapper">
+                <button id="more" class="button"><a href="#">More</a></button>
+                <a href="#"><i class="fa-solid fa-cart-arrow-down cart-icon"></i></a>
+                <i class="fa-solid fa-bars hamburger-icon"></i>
+                <div class="right-wrapper-container">
+                    <ul class="right-wrapper-menu">
+                        <li><a href="#">Notification</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="close">
+                <i class="fa-solid fa-close close-icon"></i>
+            </div>
+            <div class="user-img-container">
+                <div class="user-img-box">
+                    <img src="../Media/user.png" alt="" class="user-img">
+                </div>
+                <input type="file" id="file">
+                <label class="Upload-photo" for="file">Upload Photo</label>
+                <div class="user-id">
+                    <p>User Name</p>
+                </div>
+            </div>
+            <div class="sidebar-navlist">
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="#" class="logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <!------------------------ header-section-end  ----------------------------->
+
+
+
+
+        <!------------------------ login-form-section-start ----------------------------->
+
+        <section id="login-section" class="container-box">
+            <i class="fa-solid fa-close login-icon"></i>
+            <div class="login-container">
+                <div class="left-login-box">
+                    <p class="login-heading">Login</p>
+                    <br><br>
+                    <p class="login-text">Get Access to Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-login-box">
+                <div>
+                <div class="form-row-box">
+                    <input type="email" id="email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                </div>
+                <div class="form-row-box">
+                    <input type="password" id="password" placeholder="Enter Your Password" required minlength="8" maxlength="16">
+                    <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                    <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <div class="form-row-box">
+                    <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                   <button class="view-btn" id="login-btn" onclick="loginData()">Login</button>
+                </div>
+                <div class="form-row-box">
+                   <p><a href="#">Forget Password?</a></p> 
+                   <p><a href="#" class="create-acc">New User? Create Account</a></p>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="signup-container">
+                <div class="left-signup-box">
+                    <p class="signup-heading">Sign Up</p>
+                    <br><br>
+                    <p class="signup-text">Sign Up to Access Your Orders,Wishlist and Recommendations</p>
+                </div>
+                <div class="right-signup-box">
+                    <div>
+                        <div class="form-row-box">
+                            <input type="text" id="sign-name" placeholder="Enter Your Full Name" required minlength="3" maxlength="25" autocomplete="off">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="email" id="sign-email" placeholder="Enter Your Email" required autocomplete="off" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+                        </div>
+                        <div class="form-row-box">
+                            <input type="password" id="sign-password" placeholder="Enter Your Password" required minlength="8">
+                            <span class="password-show-btn"><i class="fa-solid fa-eye-slash"></i></span>
+                            <span class="password-hide-btn"><i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <div class="form-row-box">
+                            <p>By Continuing you agree to Ecommerce <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                            <button class="view-btn" id="signup-btn" onclick="saveData()">Sign Up</button>
+                        </div>
+                        <div class="form-row-box">
+                            <p><a href="#" class="existing-acc">Existing Account? login</a></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="welcome-container">
+                <p class="welcome-text">Sign Up Successfully</p>
+                <h2 class="welcome-heading">Welcome</h2>
+                <p class="welcome-character">Welcome</p>
+                <br>
+                <button class="view-btn" id="start-btn">Let Start</button>
+            </div>
+        </section>
+
+
+
+        <!------------------------ login-form-section-end ----------------------------->
+
+
+
+
+
+
+
+
+    <!---------------------------men-section-start-------------------------->
+
+    <section id="men-section" class="container-box">
+        <div class="upper-men-container">
+            <div class="btns-box">
+                <div class="product-filter-btn active" data-filter="ALL">ALL</div>
+                <div class="product-filter-btn" data-filter="mi">Mi</div>
+                <div class="product-filter-btn" data-filter="realme">Realme</div>
+                <div class="product-filter-btn" data-filter="samsung">Samsung</div>
+                <div class="product-filter-btn" data-filter="oppo">Oppo</div>
+                <div class="product-filter-btn" data-filter="infinix">Infinix</div>
+                <div class="product-filter-btn" data-filter="apple">Apple</div>
+                <div class="product-filter-btn" data-filter="vivo">Vivo</div>
+                <div class="product-filter-btn" data-filter="honor">Honor</div>
+                <div class="product-filter-btn" data-filter="asus">Asus</div>
+                <div class="product-filter-btn" data-filter="poco">Poco</div>
+                <div class="product-filter-btn" data-filter="motorola">Motorola</div>
+            </div>
+        </div>
+        <div class="lower-men-container">
+
+
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2f20sw0/mobile/h/c/6/10a-b09xb7hv7q-redmi-original-imagdrgp8pkbzccw.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">7,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l13whow0/mobile/0/6/7/note-11-pro-plus-5g-2201116si-redmi-original-imagcqr7spupzwtz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">21,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2rwzgw0/mobile/y/o/s/10-power-2201155m-redmi-original-imageftkn2xxnyqy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kwv0djk0/mobile/g/h/4/note-11t-21091116ai-mzb0a8qin-redmi-original-imag9g37hzxggjgg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">26,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ku04o7k0/mobile/p/8/u/9i-sport-mzb0a5iin-redmi-original-imag785qegs5ghyy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">14,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky7lci80/mobile/w/3/c/-original-imagag2gzgkcd5yx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0h1g280/mobile/e/h/c/-original-imagc9cqbgtgfzum.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">10,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky7lci80/mobile/i/w/n/-original-imagag2gugrdkbwu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l13whow0/mobile/0/6/7/note-11-pro-plus-5g-2201116si-redmi-original-imagcqr7spupzwtz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">29,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box mi">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kesv0y80/mobile/w/g/r/mi-redmi-9a-b08696xb4b-original-imafve7pjpemhwk5.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Mi Mobiles</p>
+                    <h3 class="product-rate">7,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktx9si80/mobile/d/n/p/narzo-50a-rmx3430-realme-original-imag75kymngzyabx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">26,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4fxh8w0/mobile/o/q/j/-original-imagfc55exgt8eey.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">21,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0jwbrk0/mobile/e/f/b/-original-imagcb64e6mywt9j.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">13,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kn7sdjk0/mobile/g/r/g/c21-rmx3201-realme-original-imagfxfwn9aryyda.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">10,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky90scw0/mobile/m/r/u/-original-imagagnffruu7ptd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqjtd3k0/mobile/o/4/x/c11-2021-rmx3231-realme-original-imag4j4yrdt7d9cj.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">22,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0bbonk0/shopsy-mobile/p/k/x/-original-imagc4qj5ejywxnv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">29,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktx9si80/mobile/s/o/j/narzo-50i-rmx3231-realme-original-imag75h86v5thnzy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0fm07k0/mobile/1/k/g/-original-imagc7ukmgugpdfy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">15,950/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box realme">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/knrsjgw0/mobile/f/o/w/8-5g-rmx3241-realme-original-imag2d8eksc2szzy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Realme Mobiles</p>
+                    <h3 class="product-rate">17,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        
+            
+
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kn22m4w0/mobile/9/k/s/galaxy-f12-sm-f127glbiins-samsung-original-imagftmhhhvghq7w.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">15,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqqykcw0/mobile/j/5/7/galaxy-f22-sm-e225flbdins-samsung-original-imag4z99fp4qdfby.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">14,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4n2oi80/mobile/m/w/x/-original-imagfhu6bdzhnmkz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">13,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kmjhw280/mobile/h/k/v/galaxy-m12-galaxy-m12-samsung-original-imagffy3wzrmy7ep.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">19,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l1v1uvk0/mobile/5/t/x/galaxy-m33-5g-sm-m336bzgpins-samsung-original-imagdc8mjnhxbgxj.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">28,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0sgyvk0/mobile/f/v/c/-original-imagcg22pf79cgau.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">22,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kulk9zk0/mobile/j/b/0/galaxy-m52-5g-sm-m526blbhinu-samsung-original-imag7zx66vpkp9mg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kxgfzbk0/mobile/k/t/5/guru-music-2-sm-b315-samsung-original-imag9wk9wtyaezfx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">1,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box samsung">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kqqykcw0/mobile/m/1/e/galaxy-m32-b096vd6rqg-samsung-original-imag4pfhh7mycw2u.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Samsung Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4d2ljk0/mobile/x/d/z/-original-imagf9wt5emzsjqz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2jcccw0/mobile/h/x/3/-original-imagduwqakhhkrse.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/knyxqq80/mobile/1/c/5/a53s-5g-cph2321-oppo-original-imag2gwzzxmkwgsn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">15,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kn4xhu80/mobile/d/f/c/f19-cph2219-oppo-original-imagfvj5cshwgwhp.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">18,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/knyxqq80/mobile/1/u/e/a53s-5g-cph2321-oppo-original-imag2gwzmunrmur8.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">10,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/knni7ww0/mobile/3/v/s/a54-cph2239-oppo-original-imag2aycn2mzch4x.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">19,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kl2mljk0/mobile/o/v/j/a15s-cph2179-oppo-original-imagy9ue5y2tx8rn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">22,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kyg5zm80/mobile/n/y/9/-original-imagazh6fmxqpc4m.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">28,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kzhbfrk0/mobile/v/m/h/-original-imagbgxfanhg6u35.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">27,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box oppo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ku1k4280/mobile/v/a/z/f19s-cph2223-oppo-original-imag78zafzy3sjrt.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Oppo Mobiles</p>
+                    <h3 class="product-rate">25,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box infinix">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l3dcl8w0/mobile/c/q/t/-original-imageg2rjgezh6yf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Infinix Mobiles</p>
+                    <h3 class="product-rate">10,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box infinix">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l3929ow0/mobile/x/l/a/-original-imageezmsz9z24at.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Infinix Mobiles</p>
+                    <h3 class="product-rate">7,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box infinix">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktn9pjk0/mobile/m/z/v/hot-11s-x6812-64-4-infinix-original-imag6xq7mmztsttp.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Infinix Mobiles</p>
+                    <h3 class="product-rate">8,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box infinix">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/krtjgcw0/mobile/s/8/9/smart-5a-x657c-infinix-original-imag5gnzeygmt9fh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Infinix Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box infinix">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2f20sw0/mobile/b/u/0/-original-imagdrsysyqztnhh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Infinix Mobiles</p>
+                    <h3 class="product-rate">10,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box apple">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k2jbyq80pkrrdj/mobile-refurbished/k/y/d/iphone-11-256-u-mwm82hn-a-apple-0-original-imafkg25mhaztxns.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Apple Mobiles</p>
+                    <h3 class="product-rate">41,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box apple">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/s/9/w/apple-iphone-12-pro-dummyapplefsn-original-imafwgbrnpyygbv9.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Apple Mobiles</p>
+                    <h3 class="product-rate">1,21,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box apple">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/a/j/u/iphone-13-mini-mlkc3hn-a-apple-original-imag6vp6swvmsbnn.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Apple Mobiles</p>
+                    <h3 class="product-rate">59,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box apple">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/j/f/9/apple-iphone-12-dummyapplefsn-original-imafwg8dkyh2zgrh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Apple Mobiles</p>
+                    <h3 class="product-rate">46,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box apple">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ktketu80/mobile/a/e/g/iphone-13-pro-mlvw3hn-a-apple-original-imag6vpcvspnzyfy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Apple Mobiles</p>
+                    <h3 class="product-rate">1,41,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-box apple">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k2jbyq80pkrrdj/mobile-refurbished/k/y/d/iphone-11-256-u-mwm82hn-a-apple-0-original-imafkg25mhaztxns.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Apple Mobiles</p>
+                    <h3 class="product-rate">43,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2p23rk0/mobile/s/4/3/-original-imagdznhcbdfwfud.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ks3jjbk0/mobile/p/b/k/y53s-v2058-vivo-original-imag5q35phmm3fjc.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">17,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kzd147k0/mobile/d/1/b/-original-imagbe5qddy9xr6y.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">18,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2p23rk0/mobile/x/b/y/-original-imagdznhnzmzfbwx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">21,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kzvlua80/mobile/l/2/p/-original-imagbrtkcpkgkku4.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">10,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l3dcl8w0/mobile/h/d/a/-original-imagehygfejkvt3a.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">14,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kydb3ww0/mobile/q/u/p/-original-imagamynjmgpwv8a.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">16,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l2p23rk0/mobile/7/v/w/-original-imagdznjzgvkkhtx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">20,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky0g58w0/mobile/6/7/j/-original-imagabvqfqsgnzfu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">24,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kydb3ww0/mobile/h/z/e/-original-imagahj8kauqpzmf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box vivo">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l3xcr680/mobile/d/j/c/-original-imagexm886dqzxgy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Vivo Mobiles</p>
+                    <h3 class="product-rate">8,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box honor">
+                <div class="produ12,9t-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jcnovbk0/mobile/j/c/s/honor-9-lite-lld-al10-original-imaffh2qzqyd2jmg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">21,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="produ12,9t-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jcgjo280/mobile/v/g/z/honor-9-lite-na-original-imaffh2q2p9jbzhf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">9,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/j8rnpu80/mobile/k/5/3/honor-9i-rne-l22-original-imaeyhqcgbhzdfvu.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">13,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jtkeg7k0/mobile/r/z/y/honor-8x-jsn-l42-original-imafbu58gwyxz9b9.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">14,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/mobile/h/q/e/huawei-holly-u19-original-imaeyw2cmerctjcj.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jhgl5e80/mobile/3/g/f/honor-7a-v100r001-aum-al20-original-imaf5h3wfrpsazhd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">16,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jhgl5e80/mobile/6/6/7/honor-7a-v100r001-aum-al20-original-imaf5h4anxwhmqb4.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">10,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/j70sccw0/mobile/p/9/s/honor-6x-bln-l22-original-imaexdy3wz6adfvh.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">8,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jll6xzk0/mobile/3/g/g/honor-7s-na-original-imaf8zwg9kbzurst.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box honor">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/k2jbyq80pkrrdj/mobile-refurbished/q/c/q/8c-32-u-bkk-al10-honor-4-original-imafggwden8tzdse.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Honor Mobiles</p>
+                    <h3 class="product-rate">7,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kcuug7k0/mobile/g/h/e/asus-rog-phone-3-zs661ks-6a006in-original-imaftwc6nmyuyekd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">54,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/j8vy1e80/mobile/m/b/r/asus-zenfone-4-selfie-zb553kl-5a098in-zb553kl-5a032in-original-imaeyt5hyh29jsjx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">7,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky7lci80/mobile/l/w/z/-original-imagahvnzfgdg8jy.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">41,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kcuug7k0/mobile/g/h/e/asus-rog-phone-3-zs661ks-6a006in-original-imaftwc6nmyuyekd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">44,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kzd147k0/mobile/o/v/y/-original-imagbe7wpagygwtf.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">35,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/km2clu80/mobile/8/r/x/rog-phone-5-zs673ks-1a053in-asus-original-imagff5hufbu4eg5.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">42,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ky7lci80/mobile/h/b/g/-original-imagahvgwyctt3uv.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">45,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jp02t8w0/mobile/z/z/e/asus-zenfone-max-m2-zb632kl-4a004in-original-imafbcafmv6tgqjz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box asus">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jj4ln680/mobile/9/x/v/asus-zenfone-5z-zs621kl-2h003in-zs621kl-2h013in-original-imaf6rn9vgzfh7cd.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Asus Mobiles</p>
+                    <h3 class="product-rate">21,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="product-box poco">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/jl2m7ww0/mobile/s/f/e/xiaomi-pocophone-f1-na-original-imaf8afgrdbqtsta.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Poco Mobiles</p>
+                    <h3 class="product-rate">30,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box poco">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ku4ezrk0/mobile/p/e/4/c31-mzb0a0jin-poco-original-imag7bzqxgdhgf2n.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Poco Mobiles</p>
+                    <h3 class="product-rate">24,499/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box poco">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0igvww0/mobile/6/8/o/-original-imagcafj5zcxz9wg.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Poco Mobiles</p>
+                    <h3 class="product-rate">27,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box poco">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l19m93k0/mobile/q/f/w/-original-imagcv2dgezfbfet.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Poco Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-box poco">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l4n2oi80/mobile/h/h/i/-original-imagfhuecztmg3gz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Poco Mobiles</p>
+                    <h3 class="product-rate">16,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <div class="product-box motorola">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l1l1rww0/mobile/j/e/u/-original-imagd48zzrkcjfn2.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Motorola Mobiles</p>
+                    <h3 class="product-rate">12,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box motorola">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l0o6nbk0/mobile/j/w/k/-original-imagceuvb2qasggx.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Motorola Mobiles</p>
+                    <h3 class="product-rate">11,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box motorola">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l29c9e80/mobile/l/g/m/-original-imagdnefhnhztahe.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Motorola Mobiles</p>
+                    <h3 class="product-rate">14,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box motorola">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/l1l1rww0/mobile/v/7/n/-original-imagd48zkjwujxzz.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Motorola Mobiles</p>
+                    <h3 class="product-rate">8,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box motorola">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/ksez24w0/mobile/l/s/h/edge-20-fusion-parf0001in-motorola-original-imag5yvduvn87zqc.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Motorola Mobiles</p>
+                    <h3 class="product-rate">16,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+        <div class="product-box motorola">
+                <div class="product-img-box">
+                <img src="https://rukminim1.flixcart.com/image/312/312/kw9krrk0/mobile/x/g/h/-original-imag8zgfcmarf6hj.jpeg?q=70" alt="" class="product-img">
+                </div>
+                <div class="product-detail">
+                    <p class="product-name">New Motorola Mobiles</p>
+                    <h3 class="product-rate">7,999/-</h3>
+                    <div class="cart-wish-btn">
+                        <button class="wish add-btn">Wishlist</button>
+                        <button class="cart add-btn">Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!---------------------------men-section-end---------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ delivery-section-start  ----------------------------->
+
+    <section id="delivery" class="container-box">
+        <div class="delivery-box">
+            <i class="fa-solid fa-truck delivery-icon"></i>
+            <h4>Free Shipping</h4>
+            <p>Free Shipping for all India order</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-headphones delivery-icon"></i>
+            <h4>Support 24/7</h4>
+            <p>We Support 24 hours a Day</p>
+        </div>
+        <div class="delivery-box">
+            <i class="fa-solid fa-arrow-rotate-left delivery-icon"></i>
+            <h4>100% Money Back</h4>
+            <p>You have 30 days to Return</p>
+        </div>
+    </section>
+
+    <!------------------------ delivery-section-end   ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------ footer-section-start  ----------------------------->
+
+    <footer id="footer-section" class="container-box">
+        <div class="footer-box">
+            <a href="#" id="logo-foot">E-<span>Commerce</span></a>
+            <br><br>
+            <p>354, Sector-10, Krishna Nagar, New Delhi</p>
+            <p>9873153589, 0120-765-322</p>
+            <p>Hours : 10:00 - 7:00 Mon-Sat</p>
+            <br>
+            <h3>Follow Us</h3>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-box">
+            <h3>About</h3>
+            <br>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Delivery Information</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-box">
+            <h3>My Account</h3>
+            <br>
+            <p><a href="#" class="sign-in">Sign In</a></p>
+            <p><a href="#">View Cart</a></p>
+            <p><a href="#">My Wishlist</a></p>
+            <p><a href="#">Notification</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+        <div class="footer-box">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7006.623005686194!2d77.32789807436916!3d28.59043042973749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ffd9b979eb%3A0x1925cda1418b09ad!2sSector%2010%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1655984216026!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="owner-name">
+            <p>&copy; Copyright 2022.All rights reserved.Created By <a href="https://himanshuportfolio.netlify.app/"
+                    target="_blank">Himanshu Sharma</a></p>
+        </div>
+    </footer>
+
+    <!------------------------ footer-section-end ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap-js-link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

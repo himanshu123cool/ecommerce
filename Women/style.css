@@ -483,6 +483,61 @@ a:hover{
 
 
 
+/*----------------------------- navbar-section-start  ----------------------------------*/
+
+#navbar{
+    width: 100%;
+    background-color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px var(--grey-color);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+    padding: 3rem 0;
+}
+
+.nav-links{
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    padding: 0.3rem;
+    position: relative;
+}
+
+.nav-links::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: all 1.3s;
+}
+
+.nav-links:hover::after{
+  width: 100%;
+  background-color: var(--green);
+}
+
+
+
+
+/*----------------------------- navbar-section-end  ----------------------------------*/
+
+
+
+
+
+
+
+
+
 /* ---------------------------men-section-start------------------------------  */
 
 #men-section{
@@ -534,7 +589,7 @@ a:hover{
 .product-box{
     height: 250px;
     display: grid;
-    grid-template-rows: 75% 25%;
+    grid-template-rows: 70% 30%;
     cursor: pointer;
     box-shadow: var(--shadowTint);
 }
@@ -832,6 +887,11 @@ a:hover{
         padding: 5px 40px;
     }
 
+    .menu{
+        width: 80%;
+        padding: 2.5rem 0;
+    }
+
     #delivery{
         margin: 4rem auto 1rem auto;
     }
@@ -864,6 +924,10 @@ a:hover{
 
     .left-head{
         gap: 0.5rem;
+    }
+
+    .menu{
+        padding: 2rem 0;
     }
 
     #delivery{
@@ -929,6 +993,14 @@ a:hover{
 
     .search-box{
         width: 100%;
+    }
+
+    .menu{
+        padding: 1.5rem 0;
+    }
+
+    .menu>li>a{
+        font-size: 1.2rem;
     }
 
     .right-wrapper-container{
@@ -1056,6 +1128,15 @@ a:hover{
 
     .search-box{
         width: 100%;
+    }
+
+    .menu{
+        padding: 1rem 0;
+        gap: 1.2rem;
+    }
+
+    .menu>li>a{
+        font-size: 1.3rem;
     }
 
     .cart-icon, .hamburger-icon{
@@ -1219,6 +1300,15 @@ a:hover{
 
     .search-box{
         width: 100%;
+    }
+
+    .menu{
+        padding: 0.5rem 0;
+        gap: 0.5rem 1rem;
+    }
+
+    .menu>li>a{
+        font-size: 1.1rem;
     }
 
     .cart-icon, .hamburger-icon{

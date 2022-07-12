@@ -32,9 +32,6 @@ $('.close-icon').click(function () {
 
 
 // login-form-script 
-setTimeout(function () {
-    $('#login-section').css('display', 'flex')
-}, 2000)
 
 $('.sign-in').click(function(){
     $('#login-section').css('display', 'flex')
